@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JEWELRY FARMï½çç£èã®æ¹ã¸</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&family=Shippori+Mincho:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      :root {
+        --org: #d4621a;
+        --org2: #e8834a;
+        --org-lt: #f5c49a;
+        --cream: #faf6ef;
+        --cream2: #f2ead8;
+        --cream3: #e8dcc8;
+        --grn: #4a7c4a;
+        --grn2: #3a6a3a;
+        --brn: #3d2008;
+        --brn2: #6b3d18;
+        --text: #1c1008;
+        --sub: #7a5a3a;
+        --border: #ddd0b8;
+      }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: "Noto Serif JP", serif;
+        background: var(--cream);
+        color: var(--text);
+        overflow-x: hidden;
+      }
+
+      /* ââ SCROLL REVEAL ââ */
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.75s ease, transform 0.75s ease;
+      }
+      .reveal.visible { opacity: 1; transform: none; }
+      .reveal-delay-1 { transition-delay: 0.12s; }
+      .reveal-delay-2 { transition-delay: 0.24s; }
+      .reveal-delay-3 { transition-delay: 0.36s; }
+
+      /* ââââââââââââââââââââââââââââââââââ
+   HERO  â  å¨å¹CSSèæ¯ï¼ä¸­å¤®ãã­ã¹ã
+ââââââââââââââââââââââââââââââââââ */
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background:
+          radial-gradient(ellipse at 30% 40%, rgba(180,80,20,0.55) 0%, transparent 55%),
+          radial-gradient(ellipse at 75% 70%, rgba(107,61,24,0.4) 0%, transparent 50%),
+          linear-gradient(160deg, #1a0800 0%, #3d1a06 35%, #2d0f04 65%, #0f0400 100%);
+      }
+      /* è£é£¾çãªåã®æ¼åº */
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse at 60% 20%, rgba(212,98,26,0.12) 0%, transparent 45%),
+          radial-gradient(ellipse at 10% 80%, rgba(74,124,74,0.08) 0%, transparent 40%);
+        pointer-events: none;
+      }
+
+      /* ãã­ã¹ãã³ã³ãã³ã */
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 6rem 2rem 5rem;
+        max-width: 760px;
+        width: 100%;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.78rem;
+        letter-spacing: 0.28em;
+        color: var(--org-lt);
+        border: 1px solid rgba(245, 196, 154, 0.45);
+        padding: 0.4em 1.4em;
+        border-radius: 99px;
+        width: fit-content;
+        margin: 0 auto 2.2rem;
+        backdrop-filter: blur(4px);
+        background: rgba(255,255,255,0.05);
+      }
+
+      .hero h1 {
+        font-family: "Shippori Mincho", serif;
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        font-weight: 700;
+        line-height: 1.45;
+        letter-spacing: 0.04em;
+        margin-bottom: 1.8rem;
+        color: #faf0e0;
+        text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: var(--org-lt);
+        display: block;
+        font-size: 0.72em;
+        letter-spacing: 0.16em;
+        margin-bottom: 0.3rem;
+        font-weight: 400;
+      }
+
+      .hero-lead {
+        font-size: clamp(0.88rem, 1.8vw, 1.05rem);
+        line-height: 2.1;
+        color: rgba(255,255,255,0.82);
+        margin-bottom: 3rem;
+        font-weight: 300;
+        text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+      }
+
+      /* åºåãç· */
+      .hero-divider {
+        width: 40px;
+        height: 1px;
+        background: var(--org-lt);
+        margin: 0 auto 2rem;
+        opacity: 0.5;
+      }
+
+      .btn-main {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        background: var(--grn);
+        color: #fff;
+        font-family: "Noto Serif JP", serif;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 1.1em 2.6em;
+        border-radius: 99px;
+        text-decoration: none;
+        letter-spacing: 0.08em;
+        transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+        box-shadow: 0 4px 24px rgba(74, 124, 74, 0.45);
+        margin: 0 auto;
+      }
+      .btn-main:hover {
+        background: var(--grn2);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 32px rgba(74, 124, 74, 0.5);
+      }
+      .btn-main svg { flex-shrink: 0; }
+
+      /* ââââââââââââââââââââââââââââââââââ
+   SECTION BASE
+ââââââââââââââââââââââââââââââââââ */
+      .sec { padding: 6rem 1.5rem; }
+      .inner { max-width: 900px; margin: 0 auto; }
+      .inner-sm { max-width: 680px; margin: 0 auto; }
+
+      .sec-label {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.78rem;
+        letter-spacing: 0.3em;
+        color: var(--org);
+        display: block;
+        margin-bottom: 0.8rem;
+      }
+      .sec-rule {
+        width: 36px; height: 2px;
+        background: var(--org);
+        margin-bottom: 1.8rem;
+      }
+      h2.sec-title {
+        font-family: "Shippori Mincho", serif;
+        font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+        font-weight: 700;
+        line-height: 1.55;
+        letter-spacing: 0.04em;
+        margin-bottom: 1.2rem;
+        color: var(--brn);
+      }
+      .sec-body {
+        font-size: 1rem;
+        line-height: 2;
+        color: var(--sub);
+        font-weight: 300;
+      }
+
+      /* ââââââââââââââââââââââââââââââââââ
+   FOR FARMERS  â  ã³ã³ãã¯ãç
+ââââââââââââââââââââââââââââââââââ */
+      .empathy {
+        background: var(--brn);
+        position: relative;
+        overflow: hidden;
+      }
+      /* ã°ã©ãã¼ã·ã§ã³è£é£¾ï¼ç»åãªãã»ç¢ºå®ã«è¡¨ç¤ºï¼ */
+      .empathy::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse at 30% 50%, rgba(212,98,26,0.12) 0%, transparent 60%),
+          radial-gradient(ellipse at 80% 20%, rgba(107,61,24,0.2) 0%, transparent 50%);
+      }
+      .empathy .inner-sm {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+      }
+      .empathy .sec-label { color: var(--org-lt); }
+      .empathy .sec-rule { margin: 0 auto 1.8rem; }
+
+      /* â ã²ã¨ãã¨ã­ã£ãã â */
+      .empathy-headline {
+        font-family: "Shippori Mincho", serif;
+        font-size: clamp(1.45rem, 3.5vw, 2.2rem);
+        color: #faf0e0;
+        font-weight: 700;
+        line-height: 1.65;
+        letter-spacing: 0.04em;
+        margin-bottom: 3rem;
+      }
+      .empathy-headline span {
+        color: var(--org-lt);
+      }
+
+      /* â OUR MISSION â */
+      .empathy-mission {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(245,196,154,0.18);
+        border-radius: 16px;
+        padding: 2.6rem 3rem;
+        text-align: left;
+      }
+      .empathy-mission-label {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.75rem;
+        letter-spacing: 0.3em;
+        color: var(--org);
+        display: block;
+        margin-bottom: 1.2rem;
+      }
+      .empathy-mission p {
+        font-size: 1rem;
+        line-height: 2.1;
+        color: #c8aa88;
+        font-weight: 300;
+      }
+      .empathy-mission p + p { margin-top: 1.2rem; }
+      .empathy-mission em {
+        font-style: normal;
+        color: #faf0e0;
+        font-weight: 600;
+      }
+      @media (max-width: 640px) {
+        .empathy-mission { padding: 1.8rem 1.4rem; }
+      }
+
+      /* ââââââââââââââââââââââââââââââââââ
+   PROBLEMS
+ââââââââââââââââââââââââââââââââââ */
+      .problems { background: var(--cream); }
+
+      .problem-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+        margin-top: 3rem;
+      }
+      @media (max-width: 640px) { .problem-grid { grid-template-columns: 1fr; } }
+
+      .problem-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 2rem 1.6rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .problem-card::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 4px;
+        background: var(--org2);
+      }
+      .problem-icon {
+        width: 52px; height: 52px;
+        border-radius: 12px;
+        background: var(--cream2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.2rem;
+        font-size: 1.6rem;
+      }
+      .problem-card h3 {
+        font-family: "Shippori Mincho", serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--brn);
+        margin-bottom: 0.7rem;
+      }
+      .problem-card p {
+        font-size: 0.9rem;
+        line-height: 1.9;
+        color: var(--sub);
+        font-weight: 300;
+      }
+
+      /* ââââââââââââââââââââââââââââââââââ
+   PROMISES
+ââââââââââââââââââââââââââââââââââ */
+      .promises { background: var(--cream2); }
+
+      .promise-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 3rem;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 8px 48px rgba(61, 32, 8, 0.1);
+      }
+      .promise-item {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        min-height: 260px;
+        overflow: hidden;
+      }
+      @media (max-width: 700px) { .promise-item { grid-template-columns: 1fr; } }
+      .promise-item:nth-child(even) { direction: rtl; }
+      .promise-item:nth-child(even) > * { direction: ltr; }
+
+      .promise-img {
+        position: relative;
+        overflow: hidden;
+        min-height: 220px;
+      }
+      .promise-img-1 { background: linear-gradient(135deg, #3a6a3a 0%, #7ab04a 60%, #4a7c4a 100%); }
+      .promise-img-2 { background: linear-gradient(135deg, #8b4513 0%, #d4621a 60%, #3d2008 100%); }
+      .promise-img-3 { background: linear-gradient(135deg, #2d5a2d 0%, #4a7c4a 50%, #6b3d18 100%); }
+      .promise-img img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.6s ease;
+        position: relative; z-index: 1;
+      }
+      .promise-item:hover .promise-img img { transform: scale(1.04); }
+
+      .promise-body {
+        background: #fff;
+        padding: 2.8rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      @media (max-width: 700px) { .promise-body { padding: 2rem 1.6rem; } }
+
+      .promise-num-tag {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.8rem;
+        letter-spacing: 0.3em;
+        color: var(--org);
+        margin-bottom: 0.8rem;
+      }
+      .promise-body h3 {
+        font-family: "Shippori Mincho", serif;
+        font-size: 1.45rem;
+        font-weight: 700;
+        color: var(--brn);
+        margin-bottom: 1rem;
+        line-height: 1.45;
+      }
+      .promise-body p {
+        font-size: 0.95rem;
+        line-height: 2;
+        color: var(--sub);
+        font-weight: 300;
+      }
+      .promise-tag {
+        display: inline-block;
+        margin-top: 1.2rem;
+        background: var(--cream2);
+        color: var(--org);
+        font-size: 0.8rem;
+        padding: 0.3em 1em;
+        border-radius: 99px;
+        border: 1px solid var(--org-lt);
+        font-weight: 600;
+        width: fit-content;
+      }
+
+      /* ââââââââââââââââââââââââââââââââââ
+   VOICES  â  æ¨ªã¹ã¯ã­ã¼ã«ã«ã«ã¼ã»ã«
+ââââââââââââââââââââââââââââââââââ */
+      .voices {
+        background: var(--brn2);
+        position: relative;
+        overflow: hidden;
+      }
+      /* ã°ã©ãã¼ã·ã§ã³è£é£¾ï¼ç»åãªãï¼ */
+      .voices::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse at 20% 60%, rgba(212,98,26,0.08) 0%, transparent 55%),
+          radial-gradient(ellipse at 80% 30%, rgba(61,32,8,0.3) 0%, transparent 50%);
+      }
+      .voices .inner { position: relative; z-index: 1; }
+      .voices .sec-label { color: var(--org-lt); }
+      .voices .sec-rule { background: var(--org-lt); }
+      .voices h2.sec-title { color: #faf0e0; }
+
+      /* ã«ã«ã¼ã»ã«ã©ããã¼ */
+      .voice-carousel-wrap {
+        position: relative;
+        margin-top: 3rem;
+      }
+
+      .voice-carousel {
+        display: flex;
+        gap: 1.4rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 1rem;
+      }
+      .voice-carousel::-webkit-scrollbar { display: none; }
+
+      .voice-card {
+        flex: 0 0 calc(50% - 0.7rem);
+        scroll-snap-align: start;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 16px;
+        padding: 2rem 1.8rem;
+        backdrop-filter: blur(8px);
+      }
+      @media (max-width: 700px) {
+        .voice-card { flex: 0 0 82vw; }
+      }
+      .voice-card .quote-mark {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 3.5rem;
+        color: var(--org-lt);
+        line-height: 0.8;
+        margin-bottom: 1rem;
+        opacity: 0.6;
+      }
+      .voice-text {
+        font-size: 0.98rem;
+        line-height: 2;
+        color: #eee0cc;
+        margin-bottom: 1.2rem;
+        font-weight: 300;
+      }
+      .voice-attr {
+        font-size: 0.8rem;
+        color: var(--org-lt);
+        letter-spacing: 0.08em;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .voice-attr::before {
+        content: "";
+        width: 20px; height: 1px;
+        background: var(--org-lt);
+        flex-shrink: 0;
+      }
+
+      /* ã¹ã¯ã­ã¼ã«ã¤ã³ã¸ã±ã¼ã¿ã¼ */
+      .voice-dots {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1.2rem;
+      }
+      .voice-dot {
+        width: 6px; height: 6px;
+        border-radius: 50%;
+        background: rgba(245, 196, 154, 0.3);
+        transition: background 0.25s, transform 0.25s;
+      }
+      .voice-dot.active {
+        background: var(--org-lt);
+        transform: scale(1.3);
+      }
+
+      /* ââââââââââââââââââââââââââââââââââ
+   FLOW
+ââââââââââââââââââââââââââââââââââ */
+      .flow { background: var(--cream); }
+
+      .flow-steps {
+        display: flex;
+        gap: 0;
+        margin-top: 3rem;
+        position: relative;
+      }
+      @media (max-width: 640px) { .flow-steps { flex-direction: column; } }
+
+      .flow-steps::before {
+        content: "";
+        position: absolute;
+        top: 36px;
+        left: 10%; right: 10%;
+        height: 2px;
+        background: var(--border);
+        z-index: 0;
+      }
+      @media (max-width: 640px) { .flow-steps::before { display: none; } }
+
+      .flow-step {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 1rem;
+        position: relative;
+        z-index: 1;
+      }
+      .flow-circle {
+        width: 72px; height: 72px;
+        border-radius: 50%;
+        background: var(--org);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+        box-shadow: 0 4px 16px rgba(212, 98, 26, 0.3);
+        border: 3px solid #fff;
+      }
+      .flow-step h3 {
+        font-family: "Shippori Mincho", serif;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--brn);
+        margin-bottom: 0.5rem;
+      }
+      .flow-step p {
+        font-size: 0.82rem;
+        color: var(--sub);
+        line-height: 1.7;
+        font-weight: 300;
+      }
+
+      /* ââââââââââââââââââââââââââââââââââ
+   FAQ
+ââââââââââââââââââââââââââââââââââ */
+      .faq { background: var(--cream2); }
+
+      .faq-list {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .faq-item {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: box-shadow 0.2s;
+      }
+      .faq-item:hover { box-shadow: 0 4px 20px rgba(61, 32, 8, 0.08); }
+      .faq-item.open { border-color: var(--org2); }
+
+      .faq-q {
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 1.4rem 1.8rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+        text-align: left;
+      }
+      .faq-qmark {
+        flex-shrink: 0;
+        width: 32px; height: 32px;
+        border-radius: 50%;
+        background: var(--org);
+        color: #fff;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .faq-qtext {
+        flex: 1;
+        font-family: "Shippori Mincho", serif;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--brn);
+        line-height: 1.5;
+      }
+      .faq-arrow {
+        flex-shrink: 0;
+        width: 20px; height: 20px;
+        color: var(--org);
+        transition: transform 0.25s;
+      }
+      .faq-item.open .faq-arrow { transform: rotate(180deg); }
+
+      .faq-a {
+        display: none;
+        padding: 0 1.8rem 1.4rem calc(1.8rem + 32px + 1rem);
+        font-size: 0.93rem;
+        color: var(--sub);
+        line-height: 1.9;
+        font-weight: 300;
+      }
+      .faq-item.open .faq-a { display: block; }
+
+      /* ââââââââââââââââââââââââââââââââââ
+   CTA
+ââââââââââââââââââââââââââââââââââ */
+      .cta-sec {
+        background: var(--brn);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+      .cta-sec::before {
+        content: "";
+        position: absolute; inset: 0;
+        background: radial-gradient(ellipse at center, rgba(212,98,26,0.18) 0%, transparent 70%);
+      }
+      .cta-sec .inner-sm { position: relative; z-index: 1; }
+      .cta-sec .sec-label { color: var(--org-lt); }
+      .cta-sec .sec-rule { margin: 0 auto 1.8rem; background: var(--org-lt); }
+      .cta-sec h2.sec-title { color: #faf0e0; }
+      .cta-sec .sec-body { color: #c8aa88; margin-bottom: 3rem; }
+
+      .cta-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 420px;
+        margin: 0 auto 2rem;
+      }
+      @media (min-width: 560px) { .cta-cards { flex-direction: row; max-width: 700px; } }
+
+      .cta-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1.4rem 1.2rem;
+        border-radius: 16px;
+        text-decoration: none;
+        font-family: "Noto Serif JP", serif;
+        font-weight: 600;
+        font-size: 0.95rem;
+        letter-spacing: 0.04em;
+        transition: transform 0.18s, box-shadow 0.18s;
+      }
+      .cta-card:hover { transform: translateY(-4px); }
+      .cta-icon { font-size: 1.8rem; margin-bottom: 0.2rem; }
+      .cta-form { background: #fff; color: var(--brn); box-shadow: 0 4px 24px rgba(0,0,0,0.15); }
+      .cta-line { background: #06c755; color: #fff; box-shadow: 0 4px 24px rgba(6,199,85,0.3); }
+      .cta-tel  { background: var(--grn); color: #fff; box-shadow: 0 4px 24px rgba(74,124,74,0.3); }
+      .cta-sub  { font-size: 0.78rem; opacity: 0.8; font-weight: 400; }
+      .cta-note { font-size: 0.8rem; color: rgba(200,170,136,0.7); letter-spacing: 0.05em; }
+
+      /* ââââââââââââââââââââââââââââââââââ
+   FOOTER
+ââââââââââââââââââââââââââââââââââ */
+      footer {
+        background: #100802;
+        color: #4a3020;
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+        font-family: "Cormorant Garamond", serif;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ââ HERO ââ -->
+    <!-- ç»åãè¿½å ããå ´åï¼.hero ã« background-image: url("hero.jpg") ãè¿½å ãã¦ãã ãã -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-badge reveal">â¦ FOR FRUIT GROWERS</div>
+        <h1 class="reveal reveal-delay-1">
+          <em>JEWELRY FARM</em>
+          çç£èã®æ¹ã¸
+        </h1>
+        <div class="hero-divider reveal reveal-delay-2"></div>
+        <p class="hero-lead reveal reveal-delay-2">
+          ä¸¹ç²¾è¾¼ãã¦è²ã¦ãæç©ã«ããã£ã¨é«ãä¾¡å¤ãã<br />
+          ã¸ã¥ã¨ãªã¼ãã¡ã¼ã ã¯ãæ¥æ¬ç£ã®é«åè³ªãã«ã¼ãã<br />
+          å½åå¤ã®ãã¤ã¨ã³ãå¸å ´ã¸ç´æ¥å±ãã¦ãã¾ãã
+        </p>
+        <a href="#contact" class="btn-main reveal reveal-delay-3">
+          ã¾ãè©±ãèãã¦ã¿ã
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M4 9h10M10 5l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ââ FOR FARMERS  â  ã²ã¨ãã¨ã³ãã¼ï¼OUR MISSION ââ -->
+    <section class="sec empathy">
+      <div class="inner-sm">
+        <span class="sec-label reveal">FOR FARMERS</span>
+        <div class="sec-rule reveal"></div>
+
+        <h2 class="empathy-headline reveal">
+          ä¸¹ç²¾è¾¼ãã¦è²ã¦ã<span>"å®ç³"</span>ãã<br />
+          æ¶è²»èã¸ã¾ã£ããå±ããã
+        </h2>
+
+        <div class="empathy-mission reveal">
+          <span class="empathy-mission-label">OUR MISSION</span>
+          <p>
+            å¾æ¥ã®æµéã®ä»çµã¿ã§ã¯ãæç©ã¯ãæ°éã¨ç­ç´ãã ãã§è©ä¾¡ãããååã«ãªã£ã¦ãã¾ãã¾ãããã®ä»çµã«ã¯ãè¾²å®¶æ§ã®æè¡ããã ãããæ³ãã¾ã§ãåæ ããã¾ããã
+          </p>
+          <p>
+            ç§ãã¡ã¸ã¥ã¨ãªã¼ãã¡ã¼ã ãå¤§åã«ãã¦ããã®ã¯ããã ä¸ã¤ã<em>è¾²å®¶æ§ã®æãããæ¶è²»èã®æã¸ãä¾¡å¤ããã®ã¾ã¾å±ãããã¨ã</em>éã«å¥ãæµéãæ¥µéã¾ã§åããããªãã®æç©ããå®ç³ãã¨ãã¦åãåãããå ´æã«ãç§ãã¡ãã¤ãªãã¾ãã
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ââ PROBLEMS ââ -->
+    <section class="sec problems">
+      <div class="inner">
+        <span class="sec-label reveal">THE PROBLEM</span>
+        <div class="sec-rule reveal"></div>
+        <h2 class="sec-title reveal">è¾²å®¶æ§ãããããã<br />ãç¸è«</h2>
+        <div class="problem-grid">
+          <div class="problem-card reveal">
+            <div class="problem-icon">ð</div>
+            <h3>ä¾¡æ ¼ãæ¯å¹´èª­ããªã</h3>
+            <p>å¸å ´ã«ãã£ã¦è²·åä¾¡æ ¼ãä¸ä¸ããå¹´åã®è¦éããç«ã¦ã«ãããåè³ªãä¸ãã¦ãããããä¾¡æ ¼ã«åæ ãããä¿è¨¼ããªãã</p>
+          </div>
+          <div class="problem-card reveal reveal-delay-1">
+            <div class="problem-icon">ð¦</div>
+            <h3>é¸å¥ã®æéãå¤§ãããã</h3>
+            <p>åè³ªãå¤§ãããã¨ã«ç´°ããç®±ãåããªããã°ãªãããåºè·æºåã«è¿½ããããæ¬æ¥ã®è¾²ä½æ¥­ã«éä¸­ã§ããªãã</p>
+          </div>
+          <div class="problem-card reveal reveal-delay-2">
+            <div class="problem-icon">ð</div>
+            <h3>ç¸è«ã§ããåããªã</h3>
+            <p>ä»ã®åå¼åä»¥å¤ã®é¸æè¢ãæ¢ãããã¦ããå¨å²ã®ç®ãæ°ã«ãªã£ã¦ãªããªãåãåºããªãã</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ââ PROMISES ââ -->
+    <section class="sec promises">
+      <div class="inner">
+        <span class="sec-label reveal">OUR COMMITMENT</span>
+        <div class="sec-rule reveal"></div>
+        <h2 class="sec-title reveal">ã¸ã¥ã¨ãªã¼ãã¡ã¼ã ã®<br />3ã¤ã®ç´æ</h2>
+        <div class="promise-list reveal">
+
+          <div class="promise-item">
+            <!-- ç»åå·®ãæ¿ãç¨: <img src="promise1.jpg" alt="æç©ã®åç©«"> ãããã«è¿½å  -->
+            <div class="promise-img promise-img-1"></div>
+            <div class="promise-body">
+              <div class="promise-num-tag">PROMISE 01</div>
+              <h3>åºè·ã¯ã<br />ä¸¸ãã¨ä¸ç®±ã§ã</h3>
+              <p>åè³ªãã¨ã«ä½ç®±ã«ãåããå¿è¦ã¯ããã¾ãããä¸ç®±ã¾ããã¨ãé ãããã¾ããé¸å¥ã®æéãè¾²å®¶ããã«ãããããªãââãããã¸ã¥ã¨ãªã¼ãã¡ã¼ã ã®ããæ¹ã§ãã</p>
+              <span class="promise-tag">é¸å¥ä½æ¥­ã¼ã­</span>
+            </div>
+          </div>
+
+          <div class="promise-item">
+            <!-- ç»åå·®ãæ¿ãç¨: <img src="promise2.jpg" alt="å®å®ããå ±é¬"> ãããã«è¿½å  -->
+            <div class="promise-img promise-img-2"></div>
+            <div class="promise-body">
+              <div class="promise-num-tag">PROMISE 02</div>
+              <h3>å ±é¬ã¯ã<br />éå¹´ä¸å®ã</h3>
+              <p>å¸å ´ã®ååã«å·¦å³ãããªããå®å®ããè²·åä¾¡æ ¼ããç´æãã¾ããæ¯å¹´åãä¾¡æ ¼ã§è¨ç®ã§ãããããçµå¶ã®è¦éããç«ã¦ããããªãã¾ãã</p>
+              <span class="promise-tag">å¹´åãèª­ããå®å¿æ</span>
+            </div>
+          </div>
+
+          <div class="promise-item">
+            <!-- ç»åå·®ãæ¿ãç¨: <img src="promise3.jpg" alt="è¾²å®¶ã¨ã®ãã¼ããã¼ã·ãã"> ãããã«è¿½å  -->
+            <div class="promise-img promise-img-3"></div>
+            <div class="promise-body">
+              <div class="promise-num-tag">PROMISE 03</div>
+              <h3>å¨éã§ãªãã¦ãã<br />ä¸¦è¡ãã¦ãOKã</h3>
+              <p>åçºã®åå¼ã§ã¯ãªããç¶ç¶çãªãã¼ããã¼ã¨ãã¦ãä»ãåããã¾ããå¨éãå¸ãå¿è¦ã¯ããã¾ãããä¸é¨ã ãã§ããä»ã®åå¼åã¨ä¸¦è¡ãã¦ãOKã§ããã¾ãå°ããå§ãããã¾ãã</p>
+              <span class="promise-tag">ãªã¹ã¯ã¼ã­ã§å§ãããã</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ââ VOICES  â  8ä»¶æ¨ªã¹ã¯ã­ã¼ã«ã«ã«ã¼ã»ã« ââ -->
+    <section class="sec voices">
+      <div class="inner">
+        <span class="sec-label reveal">FARMER'S VOICE</span>
+        <div class="sec-rule reveal"></div>
+        <h2 class="sec-title reveal">è¾²å®¶æ§ã®å£°</h2>
+
+        <div class="voice-carousel-wrap reveal">
+          <div class="voice-carousel" id="voiceCarousel">
+
+            <div class="voice-card">
+              <div class="quote-mark">"</div>
+              <p class="voice-text">JAã®ä¾¡æ ¼ãæ¯å¹´æ°å­ãéãããã¦çµå¶ã®è¨ç»ãç«ã¦ãããªãã£ããã¸ã¥ã¨ãªã¼ããã«å¤ãã¦ããåãã¦ãæ¥å¹´ãããå¥ãããèª­ããããã«ãªã£ãã</p>
+              <span class="voice-attr">ç¦å²¡çã»30ä»£ã»ãã¡ãè¾²å®¶ï¼å¿åï¼</span>
+            </div>
+
+            <div class="voice-card">
+              <div class="quote-mark">"</div>
+              <p class="voice-text">ä¸ç®±ã¾ããã¨OKã£ã¦æåã¯ä¿¡ããããªãã£ãããã¡ã¯åè³ªã§åãã¦ãããããã®æéããªããªã£ãã ãã§ãã ãã¶æ¥½ã«ãªã£ãã</p>
+              <span class="voice-attr">ç¦å²¡çã»50ä»£ã»æ¡è¾²å®¶ï¼å¿åï¼</span>
+          ð½¥Øø((ñ¥Ø±ÍÌôÙ½¥µÉø(ñ¥Ø±ÍÌôÅÕ½ÑµµÉ¬øð½¥Øø(ñÀ±ÍÌôÙ½¥µÑáÐûî+»>[òW£â¢3¢{
+£.WG£¦£"
++nÿ#
+/
+
++¿«/G§ÂG_¢¦_ÿ
+#£wî+¿ÚkG
+/ð½Àø(ñÍÁ¸±ÍÌôÙ½¥µÑÑÈû7¿âìØÃîï~ÿ¢úËºÛ¾ò#2ÿB7¾ò$ð½ÍÁ¸ø(ð½¥Øø((ñ¥Ø±ÍÌôÙ½¥µÉø(ñ¥Ø±ÍÌôÅÕ½ÑµµÉ¬øð½¥Øø(ñÀ±ÍÌôÙ½¥µÑáÐûF£
++¯~
+'
+3
+'ûk£wG§nã¢®ºç¿ÖÛ¾û¯[¯ëW«£¢¢
+
+'ûk¢¦ÇG¢{ÿw
+3º'þ7ð½Àø(ñÍÁ¸±ÍÌôÙ½¥µÑÑÈû?Êr3ìÐÃîïÛ§¢úËºÛ¾ò#2ÿB7¾ò$ð½ÍÁ¸ø(ð½¥Øø((ñ¥Ø±ÍÌôÙ½¥µÉø(ñ¥Ø±ÍÌôÅÕ½ÑµµÉ¬øð½¥Øø(ñÀ±ÍÌôÙ½¥µÑáÐûú3Úg;£_¢úË·
+KÚkG?«
+'â»>[òW#G¯¦ó
+/»¿â7º'3
+ã
+£«óW
+O¿
+
+O£¢¦Ç
+K¢{?
+3ð½Àø(ñÍÁ¸lass="voice-attr">ããã¯å¸ã»30ä»£ã»æ¢¨è¾²å®¶ï¼å¿åï¼</span>
+            </div>
+
+            <div class="voice-card">
+              <div class="quote-mark">"</div>
+              <p class="voice-text">æåã¯è©±ã ãã®ã¤ããã ã£ããã§ãæ¡ä»¶ãèãããæã£ã¦ãããå¨ç¶ãã¼ãã«ãä½ãã¦ããã®ã¾ã¾ãé¡ããããã¨ã«ããã</p>
+              <span class="voice-attr">ç¦å²¡çã»50ä»£ã»ãã¡ãè¾²å®¶ï¼å¿åï¼</span>
+            </div>
+
+            <div class="voice-card">
+              <div class="quote-mark">"</div>
+              <p class="voice-text">æ­£ç´ãæåã¯æªããã¨æã£ã¦ãããã§ãä½åº¦ãè©±ãä¸­ã§ããã¡ã®æç©ãã¡ããã¨å¤§äºã«ãã¦ããããã¨æãããä»ã§ã¯ä¿¡é ¼ãã¦ããã</p>
+              <span class="voice-attr">ç¦å²¡çã»60ä»£ã»ææ©è¾²å®¶ï¼å¿åï¼</span>
+            </div>
+
+            <div class="voice-card">
+              <div class="quote-mark">"</div>
+              <p class="voice-text">è²ã¦ããã¨ã«ã¯èªä¿¡ããã£ããã§ãå£²ãæ¹ããã£ã¨æ©ã¿ã ã£ããã¸ã¥ã¨ãªã¼ããã¨çµãã§ãããä½ããã¨ã ãã«éä¸­ã§ããããã«ãªã£ãã</p>
+              <span class="voice-attr">ããã¯å¸ã»40ä»£ã»ãã¤ã¾ããè¾²å®¶ï¼å¿åï¼</span>
+            </div>
+
+          </div>
+
+          <!-- ãããã¤ã³ã¸ã±ã¼ã¿ã¼ -->
+          <div class="voice-dots" id="voiceDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ââ FLOW ââ -->
+    <section class="sec flow">
+      <div class="inner">
+        <span class="sec-label reveal">HOW IT WORKS</span>
+        <div class="sec-rule reveal"></div>
+        <h2 class="sec-title reveal">ç¸è«ããå§ã¾ãã<br />ã·ã³ãã«ãªæµã</h2>
+        <div class="flow-steps">
+          <div class="flow-step reveal">
+            <div class="flow-circle">1</div>
+            <h3>ã¾ãç¸è«</h3>
+            <p>é»è©±ã»LINEã»ãã©ã¼ã ã§æ°è»½ã«ãé£çµ¡ãå£²ãè¾¼ã¿ã¯ä¸åãã¾ããã</p>
+          </div>
+          <div class="flow-step reveal reveal-delay-1">
+            <div class="flow-circle">2</div>
+            <h3>ç¶æ³ããèããã</h3>
+            <p>ç¾å¨ã®åºè·ç¶æ³ãä¸å®ãªãã¨ããæå½èãä¸å¯§ã«ãããªã³ã°ãã¾ãã</p>
+          </div>
+          <div class="flow-step reveal reveal-delay-2">
+            <div class="flow-circle">3</div>
+            <h3>æ¡ä»¶ãä¸ç·ã«ç¢ºèª</h3>
+            <p>åããã©ãããä¸ç·ã«èãã¾ããç¡çãªãi¡ãã¯ä¸åãã¾ããã</p>
+          </div>
+          <div class="flow-step reveal reveal-delay-3">
+            <div class="flow-circle">4</div>
+            <h3>å°ããå§ãã</h3>
+            <p>ä¸é¨ããã®ã¹ã¿ã¼ãã§OKãã¾ãè©¦ãã¦ã¿ããã¨ãã§ãã¾ãã</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ââ FAQ ââ -->
+    <section class="sec faq">
+      <div class="inner-sm">
+        <span class="sec-label reveal">FAQ</span>
+        <div class="sec-rule reveal"></div>
+        <h2 class="sec-title reveal">ç¸è«ããåã«ã<br />æ°ã«ãªããã¨ã¯ããã¾ãããï¼</h2>
+        <div class="faq-list">
+
+          <div class="faq-item reveal">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span class="faq-qmark">Q</span>
+              <span class="faq-qtext">ä»ã®åå¼åï¼JAç­ï¼ã¨ã®é¢ä¿ã¯ã©ããªãã¾ããï¼</span>
+              <svg class="faq-arrow" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-a">ç¾å¨ã®åå¼åã¸ã®åºè·ãç¶ããªãããä¸é¨ãã¸ã¥ã¨ãªã¼ãã¡ã¼ã ã«å¸ããã¨ãã§ãã¾ãããããªãå¨éåãæ¿ããå¿è¦ã¯ããã¾ããã</div>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-1">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span class="faq-qmark">Q</span>
+              <span class="faq-qtext">ç¸è«ãããã¨ã¯å¨å²ã«ç¥ããã¾ããï¼</span>
+              <svg class="faq-arrow" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-a">ãåãåããã®åå®¹ã¯ãè¾²å®¶ããã®åæãªãã«å¤é¨ã¸å±æãããã¨ã¯ããã¾ãããå®å¿ãã¦ãé£çµ¡ãã ããã</div>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-2">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span class="faq-qmark">Q</span>
+              <span class="faq-qtext">å¨éãå¸ããªãã¨ããã¾ãããï¼</span>
+              <svg class="faq-arrow" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-a">å¨éã§ãªãã¦å¤§ä¸å¤«ã§ããä¸é¨ããã®ã¹ã¿ã¼ãã§æ§ãã¾ãããã¾ãè©¦ãã¦ã¿ããã¨ãå¤§åã«ãã¦ãã¾ãã</div>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-3">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span class="faq-qmark">Q</span>
+              <span class="faq-qtext">åè³ªã«èªä¿¡ããªããã«ã¼ãã§ãå¤§ä¸å¤«ã§ããï¼</span>
+              <svg class="faq-arrow" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-a">ã¾ããç¸è«ãã ãããä¸ç·ã«ç¢ºèªãã¾ããã©ããªç¶æ³ã§ããã¾ãè©±ãèããã¦ããã ããã¨ãå¤§åã«ãã¦ãã¾ãã</div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              <span class="faq-qmark">Q</span>
+              <span class="faq-qtext">åãæ±ãã§ããæç©ã®ç¨®é¡ã¯ï¼</span>
+              <svg class="faq-arrow" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-a">ãã¡ãããããã¶ã©ããæ¿ãæ¢¨ãããããææ©é¡ãããã¾ãããªã©ãæ¥æ¬ç£ã®ãã«ã¼ãã»éèå¨è¬ãå¯¾è±¡ã¨ãã¦ãã¾ããã¾ãã¯ã©ããªåç¨®ã§ããæ°è»½ã«ãç¸è«ãã ããã</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ââ CTA ââ -->
+    <section class="sec cta-sec" id="contact">
+      <div class="inner-sm">
+        <span class="sec-label reveal">CONTACT</span>
+        <div class="sec-rule reveal"></div>
+        <h2 class="sec-title reveal">ã¾ããè©±ãèãã ãã§<br />å¤§ä¸å¤«ã§ãã</h2>
+        <p class="sec-body reveal">
+          å£²ãè¾¼ã¿ã¯ä¸åãã¾ããã<br />ããªãã®ç¶æ³ããèããã¦ãåããã©ãããä¸ç·ã«èãã¾ãã
+        </p>
+        <div class="cta-cards">
+          <a href="#form" class="cta-card cta-form reveal">
+            <span class="cta-icon">ð</span>
+            ãã©ã¼ã ã§ç¸è«ãã
+            <span class="cta-sub">24æéåä»</span>
+          </a>
+          <a href="https://line.me" class="cta-card cta-line reveal reveal-delay-1">
+            <span class="cta-icon">ð¬</span>
+            LINEã§ç¸è«ãã
+            <span class="cta-sub">æ°è»½ã«ã¡ãã»ã¼ã¸ã</span>
+          </a>
+          <a href="tel:0000000000" class="cta-card cta-tel reveal reveal-delay-2">
+            <span class="cta-icon">ð</span>
+            ãé»è©±ã¯ãã¡ã
+            <span class="cta-sub">ç´æ¥è©±ãããæ¹ã¸</span>
+          </a>
+        </div>
+        <p class="cta-note reveal">ç¸è«ã»ãåãåããã¯ç¡æã§ããç§å¯ã¯å³å®ãã¾ãã</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Â© JEWELRY FARM All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      /* âââ FAQ âââ */
+      function toggleFaq(btn) {
+        btn.closest(".faq-item").classList.toggle("open");
+      }
+
+      /* âââ VOICE CAROUSEL âââ */
+      const carousel = document.getElementById("voiceCarousel");
+      const dotsContainer = document.getElementById("voiceDots");
+      const cards = carousel.querySelectorAll(".voice-card");
+      const VISIBLE = window.innerWidth <= 700 ? 1 : 2;
+
+      // ãããçæ
+      const dotCount = Math.ceil(cards.length / VISIBLE);
+      const dots = [];
+      for (let i = 0; i < dotCount; i++) {
+        const d = document.createElement("div");
+        d.className = "voice-dot" + (i === 0 ? " active" : "");
+        d.onclick = () => scrollToCard(i * VISIBLE);
+        dotsContainer.appendChild(d);
+        dots.push(d);
+      }
+
+      function getCardWidth() {
+        if (cards.length === 0) return 0;
+        const card = cards[0];
+        return card.offsetWidth + 22; // gap 1.4rem â 22px
+      }
+
+      function scrollToCard(idx) {
+        carousel.scrollTo({ left: idx * getCardWidth(), behavior: "smooth" });
+      }
+
+      // ã¢ã¯ãã£ããããæ´æ°
+      carousel.addEventListener("scroll", () => {
+        const idx = Math.round(carousel.scrollLeft / getCardWidth());
+        const dotIdx = Math.floor(idx / VISIBLE);
+        dots.forEach((d, i) => d.classList.toggle("active", i === dotIdx));
+      }, { passive: true });
+
+      /* âââ SCROLL REVEAL âââ */
+      const observer = new IntersectionObserver(
+        (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("visible"); }),
+        { threshold: 0.1 }
+      );
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
