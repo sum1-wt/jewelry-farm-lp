@@ -430,6 +430,16 @@
         position: relative;
         margin-top: 3rem;
       }
+      .voice-carousel-wrap::after {
+        content: "";
+        position: absolute;
+        top: 0; right: 0;
+        width: 80px;
+        height: calc(100% - 1rem);
+        background: linear-gradient(to right, transparent, var(--brn2));
+        pointer-events: none;
+        z-index: 2;
+      }
 
       .voice-carousel {
         display: flex;
@@ -444,7 +454,7 @@
       .voice-carousel::-webkit-scrollbar { display: none; }
 
       .voice-card {
-        flex: 0 0 calc(50% - 0.7rem);
+        flex: 0 0 calc(42% - 0.7rem);
         scroll-snap-align: start;
         background: rgba(255, 255, 255, 0.07);
         border: 1px solid rgba(255, 255, 255, 0.12);
@@ -453,7 +463,7 @@
         backdrop-filter: blur(8px);
       }
       @media (max-width: 700px) {
-        .voice-card { flex: 0 0 82vw; }
+        .voice-card { flex: 0 0 calc(75vw - 3.3rem); }
       }
       .voice-card .quote-mark {
         font-family: "Cormorant Garamond", serif;
