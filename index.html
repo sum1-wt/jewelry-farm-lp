@@ -58,7 +58,8 @@
         background:
           radial-gradient(ellipse at 30% 40%, rgba(180,80,20,0.55) 0%, transparent 55%),
           radial-gradient(ellipse at 75% 70%, rgba(107,61,24,0.4) 0%, transparent 50%),
-          linear-gradient(160deg, #1a0800 0%, #3d1a06 35%, #2d0f04 65%, #0f0400 100%);
+          linear-gradient(160deg, rgba(26,8,0,0.72) 0%, rgba(61,26,6,0.68) 35%, rgba(45,15,4,0.72) 65%, rgba(15,4,0,0.82) 100%),
+          url("hero.jpg") center center / cover no-repeat;
       }
       /* 装飾的な光の演出 */
       .hero::before {
@@ -96,123 +97,7 @@
         margin: 0 auto 2.2rem;
         backdrop-filter: blur(4px);
         background: rgba(255,255,255,0.05);
-      }
-
-      .hero h1 {
-        font-family: "Shippori Mincho", serif;
-        font-size: clamp(2rem, 5vw, 3.4rem);
-        font-weight: 700;
-        line-height: 1.45;
-        letter-spacing: 0.04em;
-        margin-bottom: 1.8rem;
-        color: #faf0e0;
-        text-shadow: 0 2px 20px rgba(0,0,0,0.4);
-      }
-      .hero h1 em {
-        font-style: normal;
-        color: var(--org-lt);
-        display: block;
-        font-size: 0.72em;
-        letter-spacing: 0.16em;
-        margin-bottom: 0.3rem;
-        font-weight: 400;
-      }
-
-      .hero-lead {
-        font-size: clamp(0.88rem, 1.8vw, 1.05rem);
-        line-height: 2.1;
-        color: rgba(255,255,255,0.82);
-        margin-bottom: 3rem;
-        font-weight: 300;
-        text-shadow: 0 1px 8px rgba(0,0,0,0.5);
-      }
-
-      /* 区切り線 */
-      .hero-divider {
-        width: 40px;
-        height: 1px;
-        background: var(--org-lt);
-        margin: 0 auto 2rem;
-        opacity: 0.5;
-      }
-
-      .btn-main {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.6rem;
-        background: var(--grn);
-        color: #fff;
-        font-family: "Noto Serif JP", serif;
-        font-size: 1rem;
-        font-weight: 600;
-        padding: 1.1em 2.6em;
-        border-radius: 99px;
-        text-decoration: none;
-        letter-spacing: 0.08em;
-        transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-        box-shadow: 0 4px 24px rgba(74, 124, 74, 0.45);
-        margin: 0 auto;
-      }
-      .btn-main:hover {
-        background: var(--grn2);
-        transform: translateY(-3px);
-        box-shadow: 0 8px 32px rgba(74, 124, 74, 0.5);
-      }
-      .btn-main svg { flex-shrink: 0; }
-
-      /* ══════════════════════════════════
-   SECTION BASE
-══════════════════════════════════ */
-      .sec { padding: 6rem 1.5rem; }
-      .inner { max-width: 900px; margin: 0 auto; }
-      .inner-sm { max-width: 680px; margin: 0 auto; }
-
-      .sec-label {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 0.78rem;
-        letter-spacing: 0.3em;
-        color: var(--org);
-        display: block;
-        margin-bottom: 0.8rem;
-      }
-      .sec-rule {
-        width: 36px; height: 2px;
-        background: var(--org);
-        margin-bottom: 1.8rem;
-      }
-      h2.sec-title {
-        font-family: "Shippori Mincho", serif;
-        font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-        font-weight: 700;
-        line-height: 1.55;
-        letter-spacing: 0.04em;
-        margin-bottom: 1.2rem;
-        color: var(--brn);
-      }
-      .sec-body {
-        font-size: 1rem;
-        line-height: 2;
-        color: var(--sub);
-        font-weight: 300;
-      }
-
-      /* ══════════════════════════════════
-   FOR FARMERS  ─  コンパクト版
-══════════════════════════════════ */
-      .empathy {
-        background: var(--brn);
-        position: relative;
-        overflow: hidden;
-      }
-      /* グラデーション装飾（画像なし・確実に表示） */
-      .empathy::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-          radial-gradient(ellipse at 30% 50%, rgba(212,98,26,0.12) 0%, transparent 60%),
-          radial-gradient(ellipse at 80% 20%, rgba(107,61,24,0.2) 0%, transparent 50%);
-      }
+      }  }
       .empathy .inner-sm {
         position: relative;
         z-index: 1;
@@ -430,6 +315,18 @@
         position: relative;
         margin-top: 3rem;
       }
+      /* 右端フェード：続きがあることを示す */
+      .voice-carousel-wrap::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80px;
+        height: calc(100% - 1rem);
+        background: linear-gradient(to right, transparent, var(--brn2));
+        pointer-events: none;
+        z-index: 2;
+      }
 
       .voice-carousel {
         display: flex;
@@ -444,7 +341,7 @@
       .voice-carousel::-webkit-scrollbar { display: none; }
 
       .voice-card {
-        flex: 0 0 calc(50% - 0.7rem);
+        flex: 0 0 calc(42% - 0.7rem);
         scroll-snap-align: start;
         background: rgba(255, 255, 255, 0.07);
         border: 1px solid rgba(255, 255, 255, 0.12);
@@ -453,9 +350,8 @@
         backdrop-filter: blur(8px);
       }
       @media (max-width: 700px) {
-        .voice-card { flex: 0 0 82vw; }
-      }
-      .voice-card .quote-mark {
+        .voice-card { flex: 0 0 calc(75vw - 3.3rem); }
+      }      .voice-card .quote-mark {
         font-family: "Cormorant Garamond", serif;
         font-size: 3.5rem;
         color: var(--org-lt);
@@ -480,12 +376,12 @@
       }
       .voice-attr::before {
         content: "";
-        width: 20px; height: 1px;
+        width: 20px;
+        height: 1px;
         background: var(--org-lt);
         flex-shrink: 0;
       }
 
-      /* スクロールインジケーター */
       .voice-dots {
         display: flex;
         justify-content: center;
@@ -493,7 +389,8 @@
         margin-top: 1.2rem;
       }
       .voice-dot {
-        width: 6px; height: 6px;
+        width: 6px;
+        height: 6px;
         border-radius: 50%;
         background: rgba(245, 196, 154, 0.3);
         transition: background 0.25s, transform 0.25s;
@@ -600,7 +497,8 @@
       }
       .faq-qmark {
         flex-shrink: 0;
-        width: 32px; height: 32px;
+        width: 32px;
+        height: 32px;
         border-radius: 50%;
         background: var(--org);
         color: #fff;
@@ -621,7 +519,8 @@
       }
       .faq-arrow {
         flex-shrink: 0;
-        width: 20px; height: 20px;
+        width: 20px;
+        height: 20px;
         color: var(--org);
         transition: transform 0.25s;
       }
@@ -629,13 +528,25 @@
 
       .faq-a {
         display: none;
-        padding: 0 1.8rem 1.4rem calc(1.8rem + 32px + 1rem);
+        background: rgba(255,255,255,0.07);
+        padding: 1.4rem 1.8rem;
+        animation: slideDown 0.3s, fadeIn 0.3s;
+      }
+      .faq-item.open .faq-a { display: block; }
+      .faq-atext {
         font-size: 0.93rem;
         color: var(--sub);
         line-height: 1.9;
         font-weight: 300;
       }
-      .faq-item.open .faq-a { display: block; }
+      @keyframes slideDown {
+        from { text-overflow: clip; display: none; }
+        to { display: block; }
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
 
       /* ══════════════════════════════════
    CTA
@@ -704,9 +615,6 @@
     </style>
   </head>
   <body>
-
-    <!-- ══ HERO ══ -->
-    <!-- 画像を追加する場合：.hero に background-image: url("hero.jpg") を追加してください -->
     <section class="hero">
       <div class="hero-content">
         <div class="hero-badge reveal">✦ FOR FRUIT GROWERS</div>
@@ -729,17 +637,14 @@
       </div>
     </section>
 
-    <!-- ══ FOR FARMERS  ─  ひとことコピー＋OUR MISSION ══ -->
     <section class="sec empathy">
       <div class="inner-sm">
         <span class="sec-label reveal">FOR FARMERS</span>
         <div class="sec-rule reveal"></div>
-
         <h2 class="empathy-headline reveal">
           丹精込めて育てた<span>"宝石"</span>を、<br />
           消費者へまっすぐ届ける。
         </h2>
-
         <div class="empathy-mission reveal">
           <span class="empathy-mission-label">OUR MISSION</span>
           <p>
@@ -752,7 +657,6 @@
       </div>
     </section>
 
-    <!-- ══ PROBLEMS ══ -->
     <section class="sec problems">
       <div class="inner">
         <span class="sec-label reveal">THE PROBLEM</span>
@@ -761,13 +665,13 @@
         <div class="problem-grid">
           <div class="problem-card reveal">
             <div class="problem-icon">😔</div>
-            <h3>価格が毎年読めない</h3>
+            <h3>買取価格の差が激しい</h3>
             <p>市場によって買取価格が上下し、年収の見通しが立てにくい。品質を上げても、それが価格に反映される保証がない。</p>
           </div>
           <div class="problem-card reveal reveal-delay-1">
             <div class="problem-icon">📦</div>
             <h3>選別の手間が大きすぎる</h3>
-            <p>品質や大きさごとに細かく箱も分けなければならず、出荷準備に追われる。本来の農作業に集中できない。</p>
+            <p>品質や大きさごとに細かく箱を分けなければならず、出荷準備に追われる。本来の農作業に集中できない。</p>
           </div>
           <div class="problem-card reveal reveal-delay-2">
             <div class="problem-icon">😟</div>
@@ -778,17 +682,16 @@
       </div>
     </section>
 
-    <!-- ══ PROMISES ══ -->
     <section class="sec promises">
       <div class="inner">
         <span class="sec-label reveal">OUR COMMITMENT</span>
         <div class="sec-rule reveal"></div>
-        <h2 class="sec-title reveal">ジュエリーファームの<br />3つの約束</h2>
+        <h2 class="sec-title reveal">ジュエリーファームから<br />3つのお約束</h2>
         <div class="promise-list reveal">
-
           <div class="promise-item">
-            <!-- 画像差し替え用: <img src="promise1.jpg" alt="果物の収穫"> をここに追加 -->
-            <div class="promise-img promise-img-1"></div>
+            <div class="promise-img promise-img-1">
+              <img src="promise1.jpg" alt="果物の収穫">
+            </div>
             <div class="promise-body">
               <div class="promise-num-tag">PROMISE 01</div>
               <h3>出荷は、<br />丸ごと一箱で。</h3>
@@ -796,10 +699,10 @@
               <span class="promise-tag">選別作業ゼロ</span>
             </div>
           </div>
-
           <div class="promise-item">
-            <!-- 画像差し替え用: <img src="promise2.jpg" alt="安定した報酬"> をここに追加 -->
-            <div class="promise-img promise-img-2"></div>
+            <div class="promise-img promise-img-2">
+              <img src="promise2.jpg" alt="安定した報酬">
+            </div>
             <div class="promise-body">
               <div class="promise-num-tag">PROMISE 02</div>
               <h3>報酬は、<br />通年一定。</h3>
@@ -807,10 +710,10 @@
               <span class="promise-tag">年収が読める安心感</span>
             </div>
           </div>
-
           <div class="promise-item">
-            <!-- 画像差し替え用: <img src="promise3.jpg" alt="農家とのパートナーシップ"> をここに追加 -->
-            <div class="promise-img promise-img-3"></div>
+            <div class="promise-img promise-img-3">
+              <img src="promise3.jpg" alt="農家とのパートナーシップ">
+            </div>
             <div class="promise-body">
               <div class="promise-num-tag">PROMISE 03</div>
               <h3>全量でなくても、<br />並行してもOK。</h3>
@@ -818,78 +721,63 @@
               <span class="promise-tag">リスクゼロで始められる</span>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ══ VOICES  ─  8件横スクロールカルーセル ══ -->
     <section class="sec voices">
       <div class="inner">
         <span class="sec-label reveal">FARMER'S VOICE</span>
         <div class="sec-rule reveal"></div>
         <h2 class="sec-title reveal">農家様の声</h2>
-
         <div class="voice-carousel-wrap reveal">
           <div class="voice-carousel" id="voiceCarousel">
-
             <div class="voice-card">
               <div class="quote-mark">"</div>
               <p class="voice-text">JAの価格、毎年数字が違いすぎて経営の計画が立てられなかった。ジュエリーさんに変えてから初めて「来年いくら入る」が読めるようになった。</p>
-              <span class="voice-attr">福岡県・30代・ぉでご農家（匿名）</span>
+              <span class="voice-attr">福岡県・30代・いちご農家様（匿名）</span>
             </div>
-
             <div class="voice-card">
               <div class="quote-mark">"</div>
               <p class="voice-text">一箱まるごとOKって最初は信じられなかった。うちは品質で分けてたから、その手間がなくなっただけでもだいぶ楽になった。</p>
-              <span class="voice-attr">福岡県・50代・惠辸家（匿名）</span>
+              <span class="voice-attr">福岡県・50代・桃農家様（匿名）</span>
             </div>
-
             <div class="voice-card">
               <div class="quote-mark">"</div>
               <p class="voice-text">今の取引と並行でいいって聞いて、やっと動けた。全部切り替えるつもりはなかったけど、少し試してみようと思って。今は続けている。</p>
-              <span class="voice-attr">うきは市・60代・柿農家（匿名）</span>
+              <span class="voice-attr">うきは市・60代・柿農家様（匿名）</span>
             </div>
-
             <div class="voice-card">
               <div class="quote-mark">"</div>
               <p class="voice-text">周りに知られたらまずいと思ってたけど、相談内容は絶対に外に出さないと言ってもらって、まず話だけ聞いてみた。それで安心できた。</p>
-              <span class="voice-attr">福岡県・40代・ぶどう農家（匿名）</span>
+              <span class="voice-attr">福岡県・40代・ぶどう農家様（匿名）</span>
             </div>
-
             <div class="voice-card">
               <div class="quote-mark">"</div>
-              <p class="voice-text">後継ぎとして農業を続けていくなら、一つの取引先だけに頼るのは不安があった。ジュエリーさんはちゃんと話を いてくれた。</p>
-              <span clalass="voice-attr">うきは市・30代・梨農家（匿名）</span>
+              <p class="voice-text">後継ぎとして農業を続けていくなら、一つの取引先だけに頼るのは不安があった。ジュエリーさんはちゃんと話を聞いてくれた。</p>
+              <span class="voice-attr">うきは市・30代・梨農家様（匿名）</span>
             </div>
-
             <div class="voice-card">
               <div class="quote-mark">"</div>
               <p class="voice-text">最初は話だけのつもりだった。でも条件を聞いたら思ってたより全然ハードルが低くて、そのままお願いすることにした。</p>
-              <span class="voice-attr">福岡県・50代・いちご農家（匿名）</span>
+              <span class="voice-attr">福岡県・50代・いちご農家様（匿名）</span>
             </div>
-
             <div class="voice-card">
               <div class="quote-mark">"</div>
               <p class="voice-text">正直、最初は怪しいと思っていた。でも何度か話す中で、うちの果物をちゃんと大事にしてもらえると感じた。今では信頼している。</p>
-              <span class="voice-attr">福岡県・60代・柑橘農家（匿名）</span>
+              <span class="voice-attr">福岡県・60代・柑橘農家様（匿名）</span>
             </div>
-
             <div class="voice-card">
               <div class="quote-mark">"</div>
               <p class="voice-text">育てることには自信があった。でも売り方がずっと悩みだった。ジュエリーさんと組んでから、作ることだけに集中できるようになった。</p>
-              <span class="voice-attr">うきは市・40代・さつまいも農家（匿名）</span>
+              <span class="voice-attr">うきは市・40代・さつまいも農家様（匿名）</span>
             </div>
-
           </div>
-
-          <!-- ドットインジケーター -->
           <div class="voice-dots" id="voiceDots"></div>
         </div>
       </div>
     </section>
 
-    <!-- ══ FLOW ══ -->
     <section class="sec flow">
       <div class="inner">
         <span class="sec-label reveal">HOW IT WORKS</span>
@@ -897,19 +785,19 @@
         <h2 class="sec-title reveal">相談から始まる、<br />シンプルな流れ</h2>
         <div class="flow-steps">
           <div class="flow-step reveal">
-     0      <div class="flow-circle">1</div>
+            <div class="flow-circle">1</div>
             <h3>まず相談</h3>
             <p>電話・LINE・フォームで気軽にご連絡。売り込みは一切しません。</p>
           </div>
           <div class="flow-step reveal reveal-delay-1">
             <div class="flow-circle">2</div>
             <h3>状況をお聞きする</h3>
-            <p>現在の出荷状況や不安なことを、担当者が丁寧にヒイリングします。</p>
+            <p>現在の出荷状況や不安なことを、担当者が丁寧にヒアリングします。</p>
           </div>
           <div class="flow-step reveal reveal-delay-2">
             <div class="flow-circle">3</div>
             <h3>条件を一緒に確認</h3>
-            <p>合うかどうかを一緒に考えます。無理なおi��いは一切しません。</p>
+            <p>合うかどうかを一緒に考えます。無理なお願いは一切しません。</p>
           </div>
           <div class="flow-step reveal reveal-delay-3">
             <div class="flow-circle">4</div>
@@ -920,14 +808,12 @@
       </div>
     </section>
 
-    <!-- ══ FAQ ══ -->
     <section class="sec faq">
       <div class="inner-sm">
         <span class="sec-label reveal">FAQ</span>
         <div class="sec-rule reveal"></div>
-        <h2 class="sec-title reveal">相談すよ前に、<br />気になることはありませんか？</h2>
+        <h2 class="sec-title reveal">相談する前に、<br />気になることはありませんか？</h2>
         <div class="faq-list">
-
           <div class="faq-item reveal">
             <button class="faq-q" onclick="toggleFaq(this)">
               <span class="faq-qmark">Q</span>
@@ -936,9 +822,8 @@
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-            <div class="faq-a">現在の取引先への出荷を続けながら、一部をジュエリーファームに卸すことができます。いきなり全量切り替える必要はありません。</div>
+            <div class="faq-a"><span class="faq-atext">現在の取引先への出荷を続けながら、一部をジュエリーファームに卸すことができます。いきなり全量切り替える必要はありません。</span></div>
           </div>
-
           <div class="faq-item reveal reveal-delay-1">
             <button class="faq-q" onclick="toggleFaq(this)">
               <span class="faq-qmark">Q</span>
@@ -947,9 +832,8 @@
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-            <div class="faq-a">お問い合わせの内容は、農家さんの同意なしに外部へ共有することはありません。安心してご連絡ください。</div>
+            <div class="faq-a"><span class="faq-atext">お問い合わせの内容は、農家さんの同意なしに外部へ共有することはありません。安心してご連絡ください。</span></div>
           </div>
-
           <div class="faq-item reveal reveal-delay-2">
             <button class="faq-q" onclick="toggleFaq(this)">
               <span class="faq-qmark">Q</span>
@@ -958,9 +842,8 @@
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-            <div class="faq-a">全量でなくて大丈夫です。一部からのスタートで構いません。まず試してみることを大切にしています。</div>
+            <div class="faq-a"><span class="faq-atext">全量でなくて大丈夫です。一部からのスタートで構いません。まず試してみることを大切にしています。</span></div>
           </div>
-
           <div class="faq-item reveal reveal-delay-3">
             <button class="faq-q" onclick="toggleFaq(this)">
               <span class="faq-qmark">Q</span>
@@ -969,9 +852,8 @@
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-            <div class="faq-a">まずご相談ください。一緒に確認します。どんな状況でも、まず話を聞かせていただくことを大切にしています。</div>
+            <div class="faq-a"><span class="faq-atext">まずご相談ください。一緒に確認します。どんな状況でも、まず話を聞かせていただくことを大切にしています。</span></div>
           </div>
-
           <div class="faq-item reveal">
             <button class="faq-q" onclick="toggleFaq(this)">
               <span class="faq-qmark">Q</span>
@@ -980,25 +862,23 @@
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-            <div class="faq-a">いちご、もも、ぶどう、柿、梨、りんご、柑橘類、さつまいもなど、日本産のフルーツ・野菜全般を対象としています。まずはどんな品種でもお気軽にご相談ください。</div>
+            <div class="faq-a"><span class="faq-atext">いちご、もも、ぶどう、柿、梨、りんご、柑橘類、さつまいもなど、日本産のフルーツ・野菜全般を対象としています。まずはどんな品種でもお気軽にご相談ください。</span></div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ══ CTA ══ -->
     <section class="sec cta-sec" id="contact">
       <div class="inner-sm">
         <span class="sec-label reveal">CONTACT</span>
         <div class="sec-rule reveal"></div>
-    0   <h2 class="sec-title reveal">まず、話を聞くだけで<br />大丈夫です。</h2>
+        <h2 class="sec-title reveal">まず、話を聞くだけで<br />大丈夫です。</h2>
         <p class="sec-body reveal">
           売り込みは一切しません。<br />あなたの状況をお聞きして、合うかどうかを一緒に考えます。
         </p>
         <div class="cta-cards">
           <a href="#form" class="cta-card cta-form reveal">
-    0       <span class="cta-icon">📋</span>
+            <span class="cta-icon">📋</span>
             フォームで相談する
             <span class="cta-sub">24時間受付</span>
           </a>
@@ -1018,22 +898,19 @@
     </section>
 
     <footer>
-      <p>© JEWELRY FARM All Rights Reserved.</p>
+      <p>&copy; 2024 JEWELRY FARM. All rights reserved.</p>
     </footer>
 
     <script>
-      /* ─── FAQ ─── */
       function toggleFaq(btn) {
         btn.closest(".faq-item").classList.toggle("open");
       }
 
-      /* ─── VOICE CAROUSEL ─── */
       const carousel = document.getElementById("voiceCarousel");
       const dotsContainer = document.getElementById("voiceDots");
       const cards = carousel.querySelectorAll(".voice-card");
       const VISIBLE = window.innerWidth <= 700 ? 1 : 2;
 
-      // ドット生成
       const dotCount = Math.ceil(cards.length / VISIBLE);
       const dots = [];
       for (let i = 0; i < dotCount; i++) {
@@ -1047,21 +924,19 @@
       function getCardWidth() {
         if (cards.length === 0) return 0;
         const card = cards[0];
-        return card.offsetWidth + 22; // gap 1.4rem ≈ 22px
+        return card.offsetWidth + 22;
       }
 
       function scrollToCard(idx) {
         carousel.scrollTo({ left: idx * getCardWidth(), behavior: "smooth" });
       }
 
-      // アクヅィブドット更新
       carousel.addEventListener("scroll", () => {
         const idx = Math.round(carousel.scrollLeft / getCardWidth());
         const dotIdx = Math.floor(idx / VISIBLE);
         dots.forEach((d, i) => d.classList.toggle("active", i === dotIdx));
       }, { passive: true });
 
-      /* ─── SCROLL REVEAL ─── */
       const observer = new IntersectionObserver(
         (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("visible"); }),
         { threshold: 0.1 }
