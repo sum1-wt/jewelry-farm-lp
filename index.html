@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JEWELRY FARMï½çç£èã®æ¹ã¸</title>
+    <title>JEWELRY FARM｜生産者の方へ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&family=Shippori+Mincho:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
@@ -34,7 +34,7 @@
         overflow-x: hidden;
       }
 
-      /* ââ SCROLL REVEAL ââ */
+      /* ── SCROLL REVEAL ── */
       .reveal {
         opacity: 0;
         transform: translateY(28px);
@@ -45,9 +45,9 @@
       .reveal-delay-2 { transition-delay: 0.24s; }
       .reveal-delay-3 { transition-delay: 0.36s; }
 
-      /* ââââââââââââââââââââââââââââââââââ
-   HERO  â  å¨å¹CSSèæ¯ï¼ä¸­å¤®ãã­ã¹ã
-ââââââââââââââââââââââââââââââââââ */
+      /* ══════════════════════════════════
+   HERO  ─  全幅CSS背景＋中央テキスト
+══════════════════════════════════ */
       .hero {
         position: relative;
         min-height: 100vh;
@@ -60,7 +60,7 @@
           radial-gradient(ellipse at 75% 70%, rgba(107,61,24,0.4) 0%, transparent 50%),
           linear-gradient(160deg, #1a0800 0%, #3d1a06 35%, #2d0f04 65%, #0f0400 100%);
       }
-      /* è£é£¾çãªåã®æ¼åº */
+      /* 装飾的な光の演出 */
       .hero::before {
         content: "";
         position: absolute;
@@ -71,7 +71,7 @@
         pointer-events: none;
       }
 
-      /* ãã­ã¹ãã³ã³ãã³ã */
+      /* テキストコンテンツ */
       .hero-content {
         position: relative;
         z-index: 2;
@@ -127,7 +127,7 @@
         text-shadow: 0 1px 8px rgba(0,0,0,0.5);
       }
 
-      /* åºåãç· */
+      /* 区切り線 */
       .hero-divider {
         width: 40px;
         height: 1px;
@@ -160,9 +160,9 @@
       }
       .btn-main svg { flex-shrink: 0; }
 
-      /* ââââââââââââââââââââââââââââââââââ
+      /* ══════════════════════════════════
    SECTION BASE
-ââââââââââââââââââââââââââââââââââ */
+══════════════════════════════════ */
       .sec { padding: 6rem 1.5rem; }
       .inner { max-width: 900px; margin: 0 auto; }
       .inner-sm { max-width: 680px; margin: 0 auto; }
@@ -196,15 +196,15 @@
         font-weight: 300;
       }
 
-      /* ââââââââââââââââââââââââââââââââââ
-   FOR FARMERS  â  ã³ã³ãã¯ãç
-ââââââââââââââââââââââââââââââââââ */
+      /* ══════════════════════════════════
+   FOR FARMERS  ─  コンパクト版
+══════════════════════════════════ */
       .empathy {
         background: var(--brn);
         position: relative;
         overflow: hidden;
       }
-      /* ã°ã©ãã¼ã·ã§ã³è£é£¾ï¼ç»åãªãã»ç¢ºå®ã«è¡¨ç¤ºï¼ */
+      /* グラデーション装飾（画像なし・確実に表示） */
       .empathy::before {
         content: "";
         position: absolute;
@@ -221,7 +221,7 @@
       .empathy .sec-label { color: var(--org-lt); }
       .empathy .sec-rule { margin: 0 auto 1.8rem; }
 
-      /* â ã²ã¨ãã¨ã­ã£ãã â */
+      /* ─ ひとことキャッチ ─ */
       .empathy-headline {
         font-family: "Shippori Mincho", serif;
         font-size: clamp(1.45rem, 3.5vw, 2.2rem);
@@ -235,7 +235,7 @@
         color: var(--org-lt);
       }
 
-      /* â OUR MISSION â */
+      /* ─ OUR MISSION ─ */
       .empathy-mission {
         background: rgba(255,255,255,0.05);
         border: 1px solid rgba(245,196,154,0.18);
@@ -267,9 +267,9 @@
         .empathy-mission { padding: 1.8rem 1.4rem; }
       }
 
-      /* ââââââââââââââââââââââââââââââââââ
+      /* ══════════════════════════════════
    PROBLEMS
-ââââââââââââââââââââââââââââââââââ */
+══════════════════════════════════ */
       .problems { background: var(--cream); }
 
       .problem-grid {
@@ -319,9 +319,9 @@
         font-weight: 300;
       }
 
-      /* ââââââââââââââââââââââââââââââââââ
+      /* ══════════════════════════════════
    PROMISES
-ââââââââââââââââââââââââââââââââââ */
+══════════════════════════════════ */
       .promises { background: var(--cream2); }
 
       .promise-list {
@@ -403,15 +403,15 @@
         width: fit-content;
       }
 
-      /* ââââââââââââââââââââââââââââââââââ
-   VOICES  â  æ¨ªã¹ã¯ã­ã¼ã«ã«ã«ã¼ã»ã«
-ââââââââââââââââââââââââââââââââââ */
+      /* ══════════════════════════════════
+   VOICES  ─  横スクロールカルーセル
+══════════════════════════════════ */
       .voices {
         background: var(--brn2);
         position: relative;
         overflow: hidden;
       }
-      /* ã°ã©ãã¼ã·ã§ã³è£é£¾ï¼ç»åãªãï¼ */
+      /* グラデーション装飾（画像なし） */
       .voices::before {
         content: "";
         position: absolute;
@@ -425,7 +425,7 @@
       .voices .sec-rule { background: var(--org-lt); }
       .voices h2.sec-title { color: #faf0e0; }
 
-      /* ã«ã«ã¼ã»ã«ã©ããã¼ */
+      /* カルーセルラッパー */
       .voice-carousel-wrap {
         position: relative;
         margin-top: 3rem;
@@ -485,7 +485,7 @@
         flex-shrink: 0;
       }
 
-      /* ã¹ã¯ã­ã¼ã«ã¤ã³ã¸ã±ã¼ã¿ã¼ */
+      /* スクロールインジケーター */
       .voice-dots {
         display: flex;
         justify-content: center;
@@ -503,9 +503,9 @@
         transform: scale(1.3);
       }
 
-      /* ââââââââââââââââââââââââââââââââââ
+      /* ══════════════════════════════════
    FLOW
-ââââââââââââââââââââââââââââââââââ */
+══════════════════════════════════ */
       .flow { background: var(--cream); }
 
       .flow-steps {
@@ -566,9 +566,9 @@
         font-weight: 300;
       }
 
-      /* ââââââââââââââââââââââââââââââââââ
+      /* ══════════════════════════════════
    FAQ
-ââââââââââââââââââââââââââââââââââ */
+══════════════════════════════════ */
       .faq { background: var(--cream2); }
 
       .faq-list {
@@ -637,9 +637,9 @@
       }
       .faq-item.open .faq-a { display: block; }
 
-      /* ââââââââââââââââââââââââââââââââââ
+      /* ══════════════════════════════════
    CTA
-ââââââââââââââââââââââââââââââââââ */
+══════════════════════════════════ */
       .cta-sec {
         background: var(--brn);
         position: relative;
@@ -689,9 +689,9 @@
       .cta-sub  { font-size: 0.78rem; opacity: 0.8; font-weight: 400; }
       .cta-note { font-size: 0.8rem; color: rgba(200,170,136,0.7); letter-spacing: 0.05em; }
 
-      /* ââââââââââââââââââââââââââââââââââ
+      /* ══════════════════════════════════
    FOOTER
-ââââââââââââââââââââââââââââââââââ */
+══════════════════════════════════ */
       footer {
         background: #100802;
         color: #4a3020;
@@ -705,23 +705,23 @@
   </head>
   <body>
 
-    <!-- ââ HERO ââ -->
-    <!-- ç»åãè¿½å ããå ´åï¼.hero ã« background-image: url("hero.jpg") ãè¿½å ãã¦ãã ãã -->
+    <!-- ══ HERO ══ -->
+    <!-- 画像を追加する場合：.hero に background-image: url("hero.jpg") を追加してください -->
     <section class="hero">
       <div class="hero-content">
-        <div class="hero-badge reveal">â¦ FOR FRUIT GROWERS</div>
+        <div class="hero-badge reveal">✦ FOR FRUIT GROWERS</div>
         <h1 class="reveal reveal-delay-1">
           <em>JEWELRY FARM</em>
-          çç£èã®æ¹ã¸
+          生産者の方へ
         </h1>
         <div class="hero-divider reveal reveal-delay-2"></div>
         <p class="hero-lead reveal reveal-delay-2">
-          ä¸¹ç²¾è¾¼ãã¦è²ã¦ãæç©ã«ããã£ã¨é«ãä¾¡å¤ãã<br />
-          ã¸ã¥ã¨ãªã¼ãã¡ã¼ã ã¯ãæ¥æ¬ç£ã®é«åè³ªãã«ã¼ãã<br />
-          å½åå¤ã®ãã¤ã¨ã³ãå¸å ´ã¸ç´æ¥å±ãã¦ãã¾ãã
+          丹精込めて育てた果物に、もっと高い価値を。<br />
+          ジュエリーファームは、日本産の高品質フルーツを<br />
+          国内外のハイエンド市場へ直接届けています。
         </p>
         <a href="#contact" class="btn-main reveal reveal-delay-3">
-          ã¾ãè©±ãèãã¦ã¿ã
+          まず話を聞いてみる
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <path d="M4 9h10M10 5l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -729,93 +729,93 @@
       </div>
     </section>
 
-    <!-- ââ FOR FARMERS  â  ã²ã¨ãã¨ã³ãã¼ï¼OUR MISSION ââ -->
+    <!-- ══ FOR FARMERS  ─  ひとことコピー＋OUR MISSION ══ -->
     <section class="sec empathy">
       <div class="inner-sm">
         <span class="sec-label reveal">FOR FARMERS</span>
         <div class="sec-rule reveal"></div>
 
         <h2 class="empathy-headline reveal">
-          ä¸¹ç²¾è¾¼ãã¦è²ã¦ã<span>"å®ç³"</span>ãã<br />
-          æ¶è²»èã¸ã¾ã£ããå±ããã
+          丹精込めて育てた<span>"宝石"</span>を、<br />
+          消費者へまっすぐ届ける。
         </h2>
 
         <div class="empathy-mission reveal">
           <span class="empathy-mission-label">OUR MISSION</span>
           <p>
-            å¾æ¥ã®æµéã®ä»çµã¿ã§ã¯ãæç©ã¯ãæ°éã¨ç­ç´ãã ãã§è©ä¾¡ãããååã«ãªã£ã¦ãã¾ãã¾ãããã®ä»çµã«ã¯ãè¾²å®¶æ§ã®æè¡ããã ãããæ³ãã¾ã§ãåæ ããã¾ããã
+            従来の流通の仕組みでは、果物は「数量と等級」だけで評価される商品になってしまいます。その仕組には、農家様の技術やこだわり、想いまでも反映されません。
           </p>
           <p>
-            ç§ãã¡ã¸ã¥ã¨ãªã¼ãã¡ã¼ã ãå¤§åã«ãã¦ããã®ã¯ããã ä¸ã¤ã<em>è¾²å®¶æ§ã®æãããæ¶è²»èã®æã¸ãä¾¡å¤ããã®ã¾ã¾å±ãããã¨ã</em>éã«å¥ãæµéãæ¥µéã¾ã§åããããªãã®æç©ããå®ç³ãã¨ãã¦åãåãããå ´æã«ãç§ãã¡ãã¤ãªãã¾ãã
+            私たちジュエリーファームが大切にしているのは、ただ一つ。<em>農家様の手から、消費者の手へ、価値をそのまま届けること。</em>間に入る流通を極限まで削ぎ、あなたの果物が「宝石」として受け取られる場所に、私たちがつなぎます。
           </p>
         </div>
       </div>
     </section>
 
-    <!-- ââ PROBLEMS ââ -->
+    <!-- ══ PROBLEMS ══ -->
     <section class="sec problems">
       <div class="inner">
         <span class="sec-label reveal">THE PROBLEM</span>
         <div class="sec-rule reveal"></div>
-        <h2 class="sec-title reveal">è¾²å®¶æ§ãããããã<br />ãç¸è«</h2>
+        <h2 class="sec-title reveal">農家様からよくある<br />ご相談</h2>
         <div class="problem-grid">
           <div class="problem-card reveal">
-            <div class="problem-icon">ð</div>
-            <h3>ä¾¡æ ¼ãæ¯å¹´èª­ããªã</h3>
-            <p>å¸å ´ã«ãã£ã¦è²·åä¾¡æ ¼ãä¸ä¸ããå¹´åã®è¦éããç«ã¦ã«ãããåè³ªãä¸ãã¦ãããããä¾¡æ ¼ã«åæ ãããä¿è¨¼ããªãã</p>
+            <div class="problem-icon">😔</div>
+            <h3>価格が毎年読めない</h3>
+            <p>市場によって買取価格が上下し、年収の見通しが立てにくい。品質を上げても、それが価格に反映される保証がない。</p>
           </div>
           <div class="problem-card reveal reveal-delay-1">
-            <div class="problem-icon">ð¦</div>
-            <h3>é¸å¥ã®æéãå¤§ãããã</h3>
-            <p>åè³ªãå¤§ãããã¨ã«ç´°ããç®±ãåããªããã°ãªãããåºè·æºåã«è¿½ããããæ¬æ¥ã®è¾²ä½æ¥­ã«éä¸­ã§ããªãã</p>
+            <div class="problem-icon">📦</div>
+            <h3>選別の手間が大きすぎる</h3>
+            <p>品質や大きさごとに細かく箱も分けなければならず、出荷準備に追われる。本来の農作業に集中できない。</p>
           </div>
           <div class="problem-card reveal reveal-delay-2">
-            <div class="problem-icon">ð</div>
-            <h3>ç¸è«ã§ããåããªã</h3>
-            <p>ä»ã®åå¼åä»¥å¤ã®é¸æè¢ãæ¢ãããã¦ããå¨å²ã®ç®ãæ°ã«ãªã£ã¦ãªããªãåãåºããªãã</p>
+            <div class="problem-icon">😟</div>
+            <h3>相談できる先がない</h3>
+            <p>今の取引先以外の選択肢を探したくても、周囲の目が気になってなかなか動き出せない。</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ââ PROMISES ââ -->
+    <!-- ══ PROMISES ══ -->
     <section class="sec promises">
       <div class="inner">
         <span class="sec-label reveal">OUR COMMITMENT</span>
         <div class="sec-rule reveal"></div>
-        <h2 class="sec-title reveal">ã¸ã¥ã¨ãªã¼ãã¡ã¼ã ã®<br />3ã¤ã®ç´æ</h2>
+        <h2 class="sec-title reveal">ジュエリーファームの<br />3つの約束</h2>
         <div class="promise-list reveal">
 
           <div class="promise-item">
-            <!-- ç»åå·®ãæ¿ãç¨: <img src="promise1.jpg" alt="æç©ã®åç©«"> ãããã«è¿½å  -->
+            <!-- 画像差し替え用: <img src="promise1.jpg" alt="果物の収穫"> をここに追加 -->
             <div class="promise-img promise-img-1"></div>
             <div class="promise-body">
               <div class="promise-num-tag">PROMISE 01</div>
-              <h3>åºè·ã¯ã<br />ä¸¸ãã¨ä¸ç®±ã§ã</h3>
-              <p>åè³ªãã¨ã«ä½ç®±ã«ãåããå¿è¦ã¯ããã¾ãããä¸ç®±ã¾ããã¨ãé ãããã¾ããé¸å¥ã®æéãè¾²å®¶ããã«ãããããªãââãããã¸ã¥ã¨ãªã¼ãã¡ã¼ã ã®ããæ¹ã§ãã</p>
-              <span class="promise-tag">é¸å¥ä½æ¥­ã¼ã­</span>
+              <h3>出荷は、<br />丸ごと一箱で。</h3>
+              <p>品質ごとに何箱にも分ける必要はありません。一箱まるごとお預かりします。選別の手間を農家さんにかけさせない——それがジュエリーファームのやり方です。</p>
+              <span class="promise-tag">選別作業ゼロ</span>
             </div>
           </div>
 
           <div class="promise-item">
-            <!-- ç»åå·®ãæ¿ãç¨: <img src="promise2.jpg" alt="å®å®ããå ±é¬"> ãããã«è¿½å  -->
+            <!-- 画像差し替え用: <img src="promise2.jpg" alt="安定した報酬"> をここに追加 -->
             <div class="promise-img promise-img-2"></div>
             <div class="promise-body">
               <div class="promise-num-tag">PROMISE 02</div>
-              <h3>å ±é¬ã¯ã<br />éå¹´ä¸å®ã</h3>
-              <p>å¸å ´ã®ååã«å·¦å³ãããªããå®å®ããè²·åä¾¡æ ¼ããç´æãã¾ããæ¯å¹´åãä¾¡æ ¼ã§è¨ç®ã§ãããããçµå¶ã®è¦éããç«ã¦ããããªãã¾ãã</p>
-              <span class="promise-tag">å¹´åãèª­ããå®å¿æ</span>
+              <h3>報酬は、<br />通年一定。</h3>
+              <p>市場の動向に左右されない、安定した買取価格をお約束します。毎年同じ価格で計算できるから、経営の見通しが立てやすくなります。</p>
+              <span class="promise-tag">年収が読める安心感</span>
             </div>
           </div>
 
           <div class="promise-item">
-            <!-- ç»åå·®ãæ¿ãç¨: <img src="promise3.jpg" alt="è¾²å®¶ã¨ã®ãã¼ããã¼ã·ãã"> ãããã«è¿½å  -->
+            <!-- 画像差し替え用: <img src="promise3.jpg" alt="農家とのパートナーシップ"> をここに追加 -->
             <div class="promise-img promise-img-3"></div>
             <div class="promise-body">
               <div class="promise-num-tag">PROMISE 03</div>
-              <h3>å¨éã§ãªãã¦ãã<br />ä¸¦è¡ãã¦ãOKã</h3>
-              <p>åçºã®åå¼ã§ã¯ãªããç¶ç¶çãªãã¼ããã¼ã¨ãã¦ãä»ãåããã¾ããå¨éãå¸ãå¿è¦ã¯ããã¾ãããä¸é¨ã ãã§ããä»ã®åå¼åã¨ä¸¦è¡ãã¦ãOKã§ããã¾ãå°ããå§ãããã¾ãã</p>
-              <span class="promise-tag">ãªã¹ã¯ã¼ã­ã§å§ãããã</span>
+              <h3>全量でなくても、<br />並行してもOK。</h3>
+              <p>単発の取引ではなく、継続的なパートナーとしてお付き合いします。全量を卸す必要はありません。一部だけでも、今の取引先と並行してもOKです。まず小さく始められます。</p>
+              <span class="promise-tag">リスクゼロで始められる</span>
             </div>
           </div>
 
@@ -823,224 +823,217 @@
       </div>
     </section>
 
-    <!-- ââ VOICES  â  8ä»¶æ¨ªã¹ã¯ã­ã¼ã«ã«ã«ã¼ã»ã« ââ -->
+    <!-- ══ VOICES  ─  8件横スクロールカルーセル ══ -->
     <section class="sec voices">
       <div class="inner">
         <span class="sec-label reveal">FARMER'S VOICE</span>
         <div class="sec-rule reveal"></div>
-        <h2 class="sec-title reveal">è¾²å®¶æ§ã®å£°</h2>
+        <h2 class="sec-title reveal">農家様の声</h2>
 
         <div class="voice-carousel-wrap reveal">
           <div class="voice-carousel" id="voiceCarousel">
 
             <div class="voice-card">
               <div class="quote-mark">"</div>
-              <p class="voice-text">JAã®ä¾¡æ ¼ãæ¯å¹´æ°å­ãéãããã¦çµå¶ã®è¨ç»ãç«ã¦ãããªãã£ããã¸ã¥ã¨ãªã¼ããã«å¤ãã¦ããåãã¦ãæ¥å¹´ãããå¥ãããèª­ããããã«ãªã£ãã</p>
-              <span class="voice-attr">ç¦å²¡çã»30ä»£ã»ãã¡ãè¾²å®¶ï¼å¿åï¼</span>
+              <p class="voice-text">JAの価格、毎年数字が違いすぎて経営の計画が立てられなかった。ジュエリーさんに変えてから初めて「来年いくら入る」が読めるようになった。</p>
+              <span class="voice-attr">福岡県・30代・ぉでご農家（匿名）</span>
             </div>
 
             <div class="voice-card">
               <div class="quote-mark">"</div>
-              <p class="voice-text">ä¸ç®±ã¾ããã¨OKã£ã¦æåã¯ä¿¡ããããªãã£ãããã¡ã¯åè³ªã§åãã¦ãããããã®æéããªããªã£ãã ãã§ãã ãã¶æ¥½ã«ãªã£ãã</p>
-              <span class="voice-attr">ç¦å²¡çã»50ä»£ã»æ¡è¾²å®¶ï¼å¿åï¼</span>
-          ð½¥Øø((ñ¥Ø±ÍÌôÙ½¥µÉø(ñ¥Ø±ÍÌôÅÕ½ÑµµÉ¬øð½¥Øø(ñÀ±ÍÌôÙ½¥µÑáÐûî+»>[òW£â¢3¢{
-£.WG£¦£"
-+nÿ#
-/
-
-+¿«/G§ÂG_¢¦_ÿ
-#£wî+¿ÚkG
-/ð½Àø(ñÍÁ¸±ÍÌôÙ½¥µÑÑÈû7¿âìØÃîï~ÿ¢úËºÛ¾ò#2ÿB7¾ò$ð½ÍÁ¸ø(ð½¥Øø((ñ¥Ø±ÍÌôÙ½¥µÉø(ñ¥Ø±ÍÌôÅÕ½ÑµµÉ¬øð½¥Øø(ñÀ±ÍÌôÙ½¥µÑáÐûF£
-+¯~
-'
-3
-'ûk£wG§nã¢®ºç¿ÖÛ¾û¯[¯ëW«£¢¢
-
-'ûk¢¦ÇG¢{ÿw
-3º'þ7ð½Àø(ñÍÁ¸±ÍÌôÙ½¥µÑÑÈû?Êr3ìÐÃîïÛ§¢úËºÛ¾ò#2ÿB7¾ò$ð½ÍÁ¸ø(ð½¥Øø((ñ¥Ø±ÍÌôÙ½¥µÉø(ñ¥Ø±ÍÌôÅÕ½ÑµµÉ¬øð½¥Øø(ñÀ±ÍÌôÙ½¥µÑáÐûú3Úg;£_¢úË·
-KÚkG?«
-'â»>[òW#G¯¦ó
-/»¿â7º'3
-ã
-£«óW
-O¿
-
-O£¢¦Ç
-K¢{?
-3ð½Àø(ñÍÁ¸lass="voice-attr">ããã¯å¸ã»30ä»£ã»æ¢¨è¾²å®¶ï¼å¿åï¼</span>
+              <p class="voice-text">一箱まるごとOKって最初は信じられなかった。うちは品質で分けてたから、その手間がなくなっただけでもだいぶ楽になった。</p>
+              <span class="voice-attr">福岡県・50代・惠辸家（匿名）</span>
             </div>
 
             <div class="voice-card">
               <div class="quote-mark">"</div>
-              <p class="voice-text">æåã¯è©±ã ãã®ã¤ããã ã£ããã§ãæ¡ä»¶ãèãããæã£ã¦ãããå¨ç¶ãã¼ãã«ãä½ãã¦ããã®ã¾ã¾ãé¡ããããã¨ã«ããã</p>
-              <span class="voice-attr">ç¦å²¡çã»50ä»£ã»ãã¡ãè¾²å®¶ï¼å¿åï¼</span>
+              <p class="voice-text">今の取引と並行でいいって聞いて、やっと動けた。全部切り替えるつもりはなかったけど、少し試してみようと思って。今は続けている。</p>
+              <span class="voice-attr">うきは市・60代・柿農家（匿名）</span>
             </div>
 
             <div class="voice-card">
               <div class="quote-mark">"</div>
-              <p class="voice-text">æ­£ç´ãæåã¯æªããã¨æã£ã¦ãããã§ãä½åº¦ãè©±ãä¸­ã§ããã¡ã®æç©ãã¡ããã¨å¤§äºã«ãã¦ããããã¨æãããä»ã§ã¯ä¿¡é ¼ãã¦ããã</p>
-              <span class="voice-attr">ç¦å²¡çã»60ä»£ã»ææ©è¾²å®¶ï¼å¿åï¼</span>
+              <p class="voice-text">周りに知られたらまずいと思ってたけど、相談内容は絶対に外に出さないと言ってもらって、まず話だけ聞いてみた。それで安心できた。</p>
+              <span class="voice-attr">福岡県・40代・ぶどう農家（匿名）</span>
             </div>
 
             <div class="voice-card">
               <div class="quote-mark">"</div>
-              <p class="voice-text">è²ã¦ããã¨ã«ã¯èªä¿¡ããã£ããã§ãå£²ãæ¹ããã£ã¨æ©ã¿ã ã£ããã¸ã¥ã¨ãªã¼ããã¨çµãã§ãããä½ããã¨ã ãã«éä¸­ã§ããããã«ãªã£ãã</p>
-              <span class="voice-attr">ããã¯å¸ã»40ä»£ã»ãã¤ã¾ããè¾²å®¶ï¼å¿åï¼</span>
+              <p class="voice-text">後継ぎとして農業を続けていくなら、一つの取引先だけに頼るのは不安があった。ジュエリーさんはちゃんと話を いてくれた。</p>
+              <span clalass="voice-attr">うきは市・30代・梨農家（匿名）</span>
+            </div>
+
+            <div class="voice-card">
+              <div class="quote-mark">"</div>
+              <p class="voice-text">最初は話だけのつもりだった。でも条件を聞いたら思ってたより全然ハードルが低くて、そのままお願いすることにした。</p>
+              <span class="voice-attr">福岡県・50代・いちご農家（匿名）</span>
+            </div>
+
+            <div class="voice-card">
+              <div class="quote-mark">"</div>
+              <p class="voice-text">正直、最初は怪しいと思っていた。でも何度か話す中で、うちの果物をちゃんと大事にしてもらえると感じた。今では信頼している。</p>
+              <span class="voice-attr">福岡県・60代・柑橘農家（匿名）</span>
+            </div>
+
+            <div class="voice-card">
+              <div class="quote-mark">"</div>
+              <p class="voice-text">育てることには自信があった。でも売り方がずっと悩みだった。ジュエリーさんと組んでから、作ることだけに集中できるようになった。</p>
+              <span class="voice-attr">うきは市・40代・さつまいも農家（匿名）</span>
             </div>
 
           </div>
 
-          <!-- ãããã¤ã³ã¸ã±ã¼ã¿ã¼ -->
+          <!-- ドットインジケーター -->
           <div class="voice-dots" id="voiceDots"></div>
         </div>
       </div>
     </section>
 
-    <!-- ââ FLOW ââ -->
+    <!-- ══ FLOW ══ -->
     <section class="sec flow">
       <div class="inner">
         <span class="sec-label reveal">HOW IT WORKS</span>
         <div class="sec-rule reveal"></div>
-        <h2 class="sec-title reveal">ç¸è«ããå§ã¾ãã<br />ã·ã³ãã«ãªæµã</h2>
+        <h2 class="sec-title reveal">相談から始まる、<br />シンプルな流れ</h2>
         <div class="flow-steps">
           <div class="flow-step reveal">
-            <div class="flow-circle">1</div>
-            <h3>ã¾ãç¸è«</h3>
-            <p>é»è©±ã»LINEã»ãã©ã¼ã ã§æ°è»½ã«ãé£çµ¡ãå£²ãè¾¼ã¿ã¯ä¸åãã¾ããã</p>
+     0      <div class="flow-circle">1</div>
+            <h3>まず相談</h3>
+            <p>電話・LINE・フォームで気軽にご連絡。売り込みは一切しません。</p>
           </div>
           <div class="flow-step reveal reveal-delay-1">
             <div class="flow-circle">2</div>
-            <h3>ç¶æ³ããèããã</h3>
-            <p>ç¾å¨ã®åºè·ç¶æ³ãä¸å®ãªãã¨ããæå½èãä¸å¯§ã«ãããªã³ã°ãã¾ãã</p>
+            <h3>状況をお聞きする</h3>
+            <p>現在の出荷状況や不安なことを、担当者が丁寧にヒイリングします。</p>
           </div>
           <div class="flow-step reveal reveal-delay-2">
             <div class="flow-circle">3</div>
-            <h3>æ¡ä»¶ãä¸ç·ã«ç¢ºèª</h3>
-            <p>åããã©ãããä¸ç·ã«èãã¾ããç¡çãªãi¡ãã¯ä¸åãã¾ããã</p>
+            <h3>条件を一緒に確認</h3>
+            <p>合うかどうかを一緒に考えます。無理なおi��いは一切しません。</p>
           </div>
           <div class="flow-step reveal reveal-delay-3">
             <div class="flow-circle">4</div>
-            <h3>å°ããå§ãã</h3>
-            <p>ä¸é¨ããã®ã¹ã¿ã¼ãã§OKãã¾ãè©¦ãã¦ã¿ããã¨ãã§ãã¾ãã</p>
+            <h3>小さく始める</h3>
+            <p>一部からのスタートでOK。まず試してみることができます。</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ââ FAQ ââ -->
+    <!-- ══ FAQ ══ -->
     <section class="sec faq">
       <div class="inner-sm">
         <span class="sec-label reveal">FAQ</span>
         <div class="sec-rule reveal"></div>
-        <h2 class="sec-title reveal">ç¸è«ããåã«ã<br />æ°ã«ãªããã¨ã¯ããã¾ãããï¼</h2>
+        <h2 class="sec-title reveal">相談すよ前に、<br />気になることはありませんか？</h2>
         <div class="faq-list">
 
           <div class="faq-item reveal">
             <button class="faq-q" onclick="toggleFaq(this)">
               <span class="faq-qmark">Q</span>
-              <span class="faq-qtext">ä»ã®åå¼åï¼JAç­ï¼ã¨ã®é¢ä¿ã¯ã©ããªãã¾ããï¼</span>
+              <span class="faq-qtext">今の取引先（JA等）との関係はどうなりますか？</span>
               <svg class="faq-arrow" viewBox="0 0 20 20" fill="none">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-            <div class="faq-a">ç¾å¨ã®åå¼åã¸ã®åºè·ãç¶ããªãããä¸é¨ãã¸ã¥ã¨ãªã¼ãã¡ã¼ã ã«å¸ããã¨ãã§ãã¾ãããããªãå¨éåãæ¿ããå¿è¦ã¯ããã¾ããã</div>
+            <div class="faq-a">現在の取引先への出荷を続けながら、一部をジュエリーファームに卸すことができます。いきなり全量切り替える必要はありません。</div>
           </div>
 
           <div class="faq-item reveal reveal-delay-1">
             <button class="faq-q" onclick="toggleFaq(this)">
               <span class="faq-qmark">Q</span>
-              <span class="faq-qtext">ç¸è«ãããã¨ã¯å¨å²ã«ç¥ããã¾ããï¼</span>
+              <span class="faq-qtext">相談したことは周囲に知られますか？</span>
               <svg class="faq-arrow" viewBox="0 0 20 20" fill="none">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-            <div class="faq-a">ãåãåããã®åå®¹ã¯ãè¾²å®¶ããã®åæãªãã«å¤é¨ã¸å±æãããã¨ã¯ããã¾ãããå®å¿ãã¦ãé£çµ¡ãã ããã</div>
+            <div class="faq-a">お問い合わせの内容は、農家さんの同意なしに外部へ共有することはありません。安心してご連絡ください。</div>
           </div>
 
           <div class="faq-item reveal reveal-delay-2">
             <button class="faq-q" onclick="toggleFaq(this)">
               <span class="faq-qmark">Q</span>
-              <span class="faq-qtext">å¨éãå¸ããªãã¨ããã¾ãããï¼</span>
+              <span class="faq-qtext">全量を卸さないといけませんか？</span>
               <svg class="faq-arrow" viewBox="0 0 20 20" fill="none">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-            <div class="faq-a">å¨éã§ãªãã¦å¤§ä¸å¤«ã§ããä¸é¨ããã®ã¹ã¿ã¼ãã§æ§ãã¾ãããã¾ãè©¦ãã¦ã¿ããã¨ãå¤§åã«ãã¦ãã¾ãã</div>
+            <div class="faq-a">全量でなくて大丈夫です。一部からのスタートで構いません。まず試してみることを大切にしています。</div>
           </div>
 
           <div class="faq-item reveal reveal-delay-3">
             <button class="faq-q" onclick="toggleFaq(this)">
               <span class="faq-qmark">Q</span>
-              <span class="faq-qtext">åè³ªã«èªä¿¡ããªããã«ã¼ãã§ãå¤§ä¸å¤«ã§ããï¼</span>
+              <span class="faq-qtext">品質に自信がないフルーツでも大丈夫ですか？</span>
               <svg class="faq-arrow" viewBox="0 0 20 20" fill="none">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-            <div class="faq-a">ã¾ããç¸è«ãã ãããä¸ç·ã«ç¢ºèªãã¾ããã©ããªç¶æ³ã§ããã¾ãè©±ãèããã¦ããã ããã¨ãå¤§åã«ãã¦ãã¾ãã</div>
+            <div class="faq-a">まずご相談ください。一緒に確認します。どんな状況でも、まず話を聞かせていただくことを大切にしています。</div>
           </div>
 
           <div class="faq-item reveal">
             <button class="faq-q" onclick="toggleFaq(this)">
               <span class="faq-qmark">Q</span>
-              <span class="faq-qtext">åãæ±ãã§ããæç©ã®ç¨®é¡ã¯ï¼</span>
+              <span class="faq-qtext">取り扱いできる果物の種類は？</span>
               <svg class="faq-arrow" viewBox="0 0 20 20" fill="none">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-            <div class="faq-a">ãã¡ãããããã¶ã©ããæ¿ãæ¢¨ãããããææ©é¡ãããã¾ãããªã©ãæ¥æ¬ç£ã®ãã«ã¼ãã»éèå¨è¬ãå¯¾è±¡ã¨ãã¦ãã¾ããã¾ãã¯ã©ããªåç¨®ã§ããæ°è»½ã«ãç¸è«ãã ããã</div>
+            <div class="faq-a">いちご、もも、ぶどう、柿、梨、りんご、柑橘類、さつまいもなど、日本産のフルーツ・野菜全般を対象としています。まずはどんな品種でもお気軽にご相談ください。</div>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ââ CTA ââ -->
+    <!-- ══ CTA ══ -->
     <section class="sec cta-sec" id="contact">
       <div class="inner-sm">
         <span class="sec-label reveal">CONTACT</span>
         <div class="sec-rule reveal"></div>
-        <h2 class="sec-title reveal">ã¾ããè©±ãèãã ãã§<br />å¤§ä¸å¤«ã§ãã</h2>
+    0   <h2 class="sec-title reveal">まず、話を聞くだけで<br />大丈夫です。</h2>
         <p class="sec-body reveal">
-          å£²ãè¾¼ã¿ã¯ä¸åãã¾ããã<br />ããªãã®ç¶æ³ããèããã¦ãåããã©ãããä¸ç·ã«èãã¾ãã
+          売り込みは一切しません。<br />あなたの状況をお聞きして、合うかどうかを一緒に考えます。
         </p>
         <div class="cta-cards">
           <a href="#form" class="cta-card cta-form reveal">
-            <span class="cta-icon">ð</span>
-            ãã©ã¼ã ã§ç¸è«ãã
-            <span class="cta-sub">24æéåä»</span>
+    0       <span class="cta-icon">📋</span>
+            フォームで相談する
+            <span class="cta-sub">24時間受付</span>
           </a>
           <a href="https://line.me" class="cta-card cta-line reveal reveal-delay-1">
-            <span class="cta-icon">ð¬</span>
-            LINEã§ç¸è«ãã
-            <span class="cta-sub">æ°è»½ã«ã¡ãã»ã¼ã¸ã</span>
+            <span class="cta-icon">💬</span>
+            LINEで相談する
+            <span class="cta-sub">気軽にメッセージを</span>
           </a>
           <a href="tel:0000000000" class="cta-card cta-tel reveal reveal-delay-2">
-            <span class="cta-icon">ð</span>
-            ãé»è©±ã¯ãã¡ã
-            <span class="cta-sub">ç´æ¥è©±ãããæ¹ã¸</span>
+            <span class="cta-icon">📞</span>
+            お電話はこちら
+            <span class="cta-sub">直接話したい方へ</span>
           </a>
         </div>
-        <p class="cta-note reveal">ç¸è«ã»ãåãåããã¯ç¡æã§ããç§å¯ã¯å³å®ãã¾ãã</p>
+        <p class="cta-note reveal">相談・お問い合わせは無料です。秘密は厳守します。</p>
       </div>
     </section>
 
     <footer>
-      <p>Â© JEWELRY FARM All Rights Reserved.</p>
+      <p>© JEWELRY FARM All Rights Reserved.</p>
     </footer>
 
     <script>
-      /* âââ FAQ âââ */
+      /* ─── FAQ ─── */
       function toggleFaq(btn) {
         btn.closest(".faq-item").classList.toggle("open");
       }
 
-      /* âââ VOICE CAROUSEL âââ */
+      /* ─── VOICE CAROUSEL ─── */
       const carousel = document.getElementById("voiceCarousel");
       const dotsContainer = document.getElementById("voiceDots");
       const cards = carousel.querySelectorAll(".voice-card");
       const VISIBLE = window.innerWidth <= 700 ? 1 : 2;
 
-      // ãããçæ
+      // ドット生成
       const dotCount = Math.ceil(cards.length / VISIBLE);
       const dots = [];
       for (let i = 0; i < dotCount; i++) {
@@ -1054,21 +1047,21 @@ K¢{?
       function getCardWidth() {
         if (cards.length === 0) return 0;
         const card = cards[0];
-        return card.offsetWidth + 22; // gap 1.4rem â 22px
+        return card.offsetWidth + 22; // gap 1.4rem ≈ 22px
       }
 
       function scrollToCard(idx) {
         carousel.scrollTo({ left: idx * getCardWidth(), behavior: "smooth" });
       }
 
-      // ã¢ã¯ãã£ããããæ´æ°
+      // アクヅィブドット更新
       carousel.addEventListener("scroll", () => {
         const idx = Math.round(carousel.scrollLeft / getCardWidth());
         const dotIdx = Math.floor(idx / VISIBLE);
         dots.forEach((d, i) => d.classList.toggle("active", i === dotIdx));
       }, { passive: true });
 
-      /* âââ SCROLL REVEAL âââ */
+      /* ─── SCROLL REVEAL ─── */
       const observer = new IntersectionObserver(
         (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("visible"); }),
         { threshold: 0.1 }
