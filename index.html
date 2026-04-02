@@ -284,7 +284,7 @@
       /* ══════════════════════════════════
    PROBLEMS
 ══════════════════════════════════ */
-      .problems { background: var(--cream); }
+      .problems { background: var(--cream3); }
 
       .problem-grid {
         display: grid;
@@ -421,7 +421,7 @@
    VOICES  ─  横スクロールカルーセル
 ══════════════════════════════════ */
       .voices {
-        background: var(--brn2);
+        background: var(--cream3);
         position: relative;
         overflow: hidden;
       }
@@ -432,12 +432,12 @@
         inset: 0;
         background:
           radial-gradient(ellipse at 20% 60%, rgba(212,98,26,0.08) 0%, transparent 55%),
-          radial-gradient(ellipse at 80% 30%, rgba(61,32,8,0.3) 0%, transparent 50%);
+          radial-gradient(ellipse at 80% 30%, rgba(212,98,26,0.04) 0%, transparent 50%);
       }
       .voices .inner { position: relative; z-index: 1; }
-      .voices .sec-label { color: var(--org-lt); }
-      .voices .sec-rule { background: var(--org-lt); }
-      .voices h2.sec-title { color: #faf0e0; }
+      .voices .sec-label { color: var(--org); }
+      .voices .sec-rule { background: var(--org); }
+      .voices h2.sec-title { color: var(--brn); }
 
       /* カルーセルラッパー */
       .voice-carousel-wrap {
@@ -450,7 +450,7 @@
         top: 0; right: 0;
         width: 80px;
         height: calc(100% - 1rem);
-        background: linear-gradient(to right, transparent, var(--brn2));
+        background: linear-gradient(to right, transparent, var(--cream3));
         pointer-events: none;
         z-index: 2;
       }
@@ -470,11 +470,11 @@
       .voice-card {
         flex: 0 0 calc(42% - 0.7rem);
         scroll-snap-align: start;
-        background: rgba(255, 255, 255, 0.07);
-        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: #fff;
+        border: 1px solid var(--border);
         border-radius: 16px;
         padding: 2rem 1.8rem;
-        backdrop-filter: blur(8px);
+        box-shadow: 0 2px 12px rgba(61,32,8,0.06);
       }
       @media (max-width: 700px) {
         .voice-card { flex: 0 0 calc(75vw - 3.3rem); }
@@ -482,21 +482,21 @@
       .voice-card .quote-mark {
         font-family: "Cormorant Garamond", serif;
         font-size: 3.5rem;
-        color: var(--org-lt);
+        color: var(--org);
         line-height: 0.8;
         margin-bottom: 1rem;
-        opacity: 0.6;
+        opacity: 0.5;
       }
       .voice-text {
         font-size: 0.98rem;
         line-height: 2;
-        color: #eee0cc;
+        color: var(--sub);
         margin-bottom: 1.2rem;
         font-weight: 300;
       }
       .voice-attr {
         font-size: 0.8rem;
-        color: var(--org-lt);
+        color: var(--org);
         letter-spacing: 0.08em;
         display: flex;
         align-items: center;
@@ -505,7 +505,7 @@
       .voice-attr::before {
         content: "";
         width: 20px; height: 1px;
-        background: var(--org-lt);
+        background: var(--org);
         flex-shrink: 0;
       }
 
@@ -519,18 +519,18 @@
       .voice-dot {
         width: 6px; height: 6px;
         border-radius: 50%;
-        background: rgba(245, 196, 154, 0.3);
+        background: rgba(212, 98, 26, 0.2);
         transition: background 0.25s, transform 0.25s;
       }
       .voice-dot.active {
-        background: var(--org-lt);
+        background: var(--org);
         transform: scale(1.3);
       }
 
       /* ══════════════════════════════════
    FLOW
 ══════════════════════════════════ */
-      .flow { background: var(--cream); }
+      .flow { background: var(--cream2); }
 
       .flow-steps {
         display: flex;
@@ -718,7 +718,7 @@
          YOUTUBE SECTION
       ══════════════════════════════════ */
       .youtube-sec {
-      background: var(--cream2);
+      background: var(--cream3);
       padding: 6rem 1.5rem;
     }
 
@@ -788,17 +788,15 @@
       </div>
     </section>
 
-    <!-- ══ FOR FARMERS  ─  ひとことコピー＋OUR MISSION ══ -->
+    <!-- ══ FOR FARMERS（P1: cream2） ══ -->
     <section class="sec empathy">
       <div class="inner-sm">
         <span class="sec-label reveal">FOR FARMERS</span>
         <div class="sec-rule reveal"></div>
-
         <h2 class="empathy-headline reveal">
           丹精込めて育てた<span>"宝石"</span>を、<br />
           消費者へまっすぐ届ける。
         </h2>
-
         <div class="empathy-mission reveal">
           <span class="empathy-mission-label">OUR MISSION</span>
           <p>
