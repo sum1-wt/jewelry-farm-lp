@@ -700,6 +700,40 @@
       .cta-note { font-size: 0.8rem; color: rgba(200,170,136,0.7); letter-spacing: 0.05em; }
 
       /* ══════════════════════════════════
+      /* ══════════════════════════════════
+         YOUTUBE SECTION
+      ══════════════════════════════════ */
+      .youtube-sec {
+      background: var(--cream2);
+      padding: 6rem 1.5rem;
+    }
+
+    /* サムネ: PC65%・モバイル100% */
+    .yt-thumb-wrap {
+      width: 65%;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(61,32,8,.18);
+    }
+    .yt-thumb-wrap img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+    .sec-title-yt {
+      font-family: "Shippori Mincho", serif;
+      font-size: clamp(1.55rem, 3.5vw, 2.2rem);
+      font-weight: 600;
+      line-height: 1.45;
+      color: var(--brn);
+      margin-bottom: 2.8rem;
+    }
+    @media (max-width: 700px) {
+      .yt-thumb-wrap { width: 100%; }
+    }
+
    FOOTER
 ══════════════════════════════════ */
       footer {
@@ -929,6 +963,18 @@
         </div>
       </div>
     </section>
+
+    <!-- ══ YOUTUBE ══ -->
+    <section class="youtube-sec">
+  <div class="inner">
+    <span class="sec-label">YOUTUBE CHANNEL</span>
+    <div class="sec-rule"></div>
+    <h2 class="sec-title">ジュエリーファームの裏側を<br />YouTubeで発信中</h2>
+    <div class="yt-thumb-wrap">
+      <img src="yt_thumb.jpg" alt="ジュエリーファーム YouTubeチャンネル" />
+    </div>
+  </div>
+</section>
 
     <!-- ══ FAQ ══ -->
     <section class="sec faq">
